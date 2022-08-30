@@ -1,0 +1,117 @@
+<div class="side-nav-content">
+  <!--first part of sidenav-->
+  <div class="sidenav-content-divider">
+    <div class="first-row">
+      <button class="clear-button">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <p style="font-weight: bold">نقش جدید</p>
+      <p style="flex-grow: 1"></p>
+    </div>
+    <div>
+      <input
+        type="color"
+        class="content-search-mini"
+        [(ngModel)]="color"
+        placeholder="جستجو ..."
+      />
+    </div>
+  </div>
+  <!--second part of sidenav-->
+  <div>
+    <div>
+      <p style="font-weight: bold">دسترسی های پیش فرض</p>
+    </div>
+    <div>
+      <p>
+        برای افزایش سرعت و راحتی میتوانید یک نقش که دسترسی هایی شیبه نقش جدید را
+        دارد بعنوان دسترسی پیش فرض انتخاب کرده و آن را ویرایش نمایید
+      </p>
+      <mat-form-field appearance="fill" class="sidenav-secondpart-select">
+        <mat-label>نقش ها</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let roll of rolls" [value]="roll">{{
+            roll
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div></div>
+  </div>
+  <!--third part of sidenav-->
+  <div style="margin-top: 40px">
+    <p style="font-weight: bold">کاربران این نقش</p>
+  </div>
+  <div>
+    می توانید این بخش را بعد از ساختن نقش کامل کنید
+    <div>
+      <button
+        style="margin: 5px"
+        *ngFor="let chip of chips"
+        mat-raised-button
+        disabled
+      >
+        {{ chip.name }}
+      </button>
+      <button
+        style="margin: 5px"
+        mat-raised-button
+        style="background-color: #1e90ff; color: #ffffff"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+        >
+          <g
+            id="Group_705"
+            data-name="Group 705"
+            transform="translate(-1112 -360)"
+          >
+            <line
+              id="Line_664"
+              data-name="Line 664"
+              y2="10"
+              transform="translate(1117 360)"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.5"
+            />
+            <line
+              id="Line_665"
+              data-name="Line 665"
+              x1="10"
+              transform="translate(1112 365)"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.5"
+            />
+          </g>
+        </svg>
+        بیشتر
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sidenav-drawer-footer">
+  <button
+    mat-stroked-button
+    style="
+      background-color: #1e90ff;
+      color: #ffffff;
+      margin: 5px;
+      font-weight: bold;
+    "
+  >
+    ایجاد و تعیین دسترسی
+  </button>
+  <button
+    (click)="fireAddEvent()"
+    mat-stroked-button
+    style="font-weight: bold"
+  >
+    ایجاد و خروج
+  </button>
+</div>

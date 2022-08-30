@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: IRANSansWebKE, "Helvetica Neue", sans-serif; }
+
+*{
+    direction: rtl !important;
+}
+
+@font-face{
+    font-family : 'IRANSansWebKE';
+      src : url('../src/assets/digital-7.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE.WOFF') format('WOFF');
+      src : url('../src/assets/IRANSansWebKE_Bold.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE_Bold.WOFF') format('WOFF');
+      src : url('../src/assets/IRANSansWebKE_Light.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE_Light.WOFF') format('WOFF');
+      src : url('../src/assets/IRANSansWebKE_Medium.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE_Medium.WOFF') format('WOFF');
+      src : url('../src/assets/IRANSansWebKE_UltraLight.ttf') format('ttf');
+      src : url('../src/assets/IRANSansWebKE_UltraLight.WOFF') format('WOFF');
+}
+
+*{
+   font-family : 'IRANSansWebKE' ;
+}
+
+.form-container{
+    margin-top: 30px !important;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    background: #eceff1;
+    padding: 48px;
+}
+
+.form-container mat-form-field{
+    width: 100%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 16px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mat-snackbar-container{
+    background-color: blue;
+}

@@ -1,0 +1,143 @@
+.mat-toolbar{
+    display: flex;
+    align-items: center;
+    background-color: #2F3542;
+}
+
+.header-container{
+    width: 100%;
+}
+
+.name-detail{
+    width: 124px;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.avatar-detail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.name{
+ width: 88px;
+ height: 16px;
+ font-size: 12px;
+ font-weight: bold;
+ color: #FFFFFF;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: 5px;
+}
+
+.avatar-detail-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-tools{
+    display: flex;
+    align-items: center;
+}
+
+.header-input{
+    width: 264px;
+    height: 32px;
+    background-color: #414A5C;
+    position: relative;
+}
+
+.header-input-mini{
+    width: 124px;
+    height: 20px;
+    background-color: #414A5C;
+}
+
+/*.header-search-icon{
+    position: absolute;
+    transform: rotate(90deg);
+    color: #A4B0BE;
+}*/
+
+.header-search-icon-mini{
+    position: absolute;
+    left: 125px;
+    top: 68px;
+    transform: rotate(90deg);
+    color: #A4B0BE;
+}
+
+/*.header-input::placeholder{
+    position: absolute;
+    left: 1px;
+    top: 5px;
+}*/
+
+.header-input-mini::placeholder{
+    position: absolute;
+    left: 180px;
+    top: 5px;
+}
+
+.notification-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-left: 1px solid #57606F;
+    border-right: 1px solid #57606F;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.second-row{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-mini{
+    width: 100%;
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-container {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+
+.hamburger-color{
+    color: white;
+}
+
+.header-mini div button{
+    background-color: #2F3542;
+}
+
+.mini-header-toggler{
+    width: 100%;
+    height: 56px;
+    background-color: #2F3542;
+}

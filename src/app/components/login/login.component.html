@@ -1,0 +1,30 @@
+<div class="form-container mat-elevation-z5">
+  <h1>ورود</h1>
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <input matInput placeholder="Email address" formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        وارد کردن ایمیل الزامی است
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        ایمیل را به صورت صحیح وارد کنید
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="password" formControlName="password" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        وارد کردن پسورد الزامی است
+      </mat-error>
+    </mat-form-field>
+
+    <div class="center margin-top">
+      <button mat-raised-button color="primary" type="submit">ورود</button>
+    </div>
+
+    <span class="center margin-top"
+      >ثبت نام نکرده اید؟
+      <a href="signup" class="sign-up-link">ثبت نام کنید!</a>
+    </span>
+  </form>
+</div>

@@ -1,0 +1,66 @@
+.app-card{
+    width: 300px;
+    min-height: 260px;
+    border: #DFE4EA solid 1px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.example-margin {
+    margin: 0 10px;
+  }
+
+.card-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2F3542;
+}
+
+.card-title-number{
+    font-size: 14;
+    color: #2F3542;
+}
+
+.card-button{
+    margin-top: 30px;
+    box-sizing: border-box;
+    background-color: #FAF4E1;
+    width: 80px;
+    height: 24px;
+    color: #2F3542;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-status{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #2F3542;
+    font-size: 14;
+    box-sizing: border-box;
+    margin-top: 10px;
+    align-items: flex-end;
+}
+
+.divider{
+    margin-top: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }

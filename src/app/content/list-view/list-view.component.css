@@ -1,0 +1,43 @@
+.list-view{
+  box-sizing: border-box;
+  padding: 20px;
+}  
+
+table {
+  width: 100%;
+}
+
+.table-container{
+  padding: 10px;
+}
+
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+   padding-left: 0px; 
+   text-align: right;
+}
+
+th.mat-header-cell {
+  text-align: right;
+}
+
+.mat-header-cell{
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  border-top: #1E90FF solid 5px;
+}
+
+.mat-cell{
+  font-size: 12px;
+  color: black;
+}
+
+.list-position-color{
+  width: 56px;
+  height: 24px;
+  background-color: #DFF7E9;
+}
+
+.bottom-text{
+  margin: 20px;
+}

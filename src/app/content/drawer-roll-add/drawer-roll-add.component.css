@@ -1,0 +1,36 @@
+.side-nav-content{
+    display: flex;
+    flex-direction: column;
+     padding: 20px;
+}
+
+.sidenav-content-divider{
+    margin-bottom: 50px;
+}
+
+.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clear-button{
+    border: none;
+    background-color: #ffffff;
+}
+
+.content-search-mini{
+    min-width: 260px;
+    height: 32px;
+    border: #A4B0BE solid 1px;
+    flex-wrap: wrap;
+}
+
+.sidenav-secondpart-select{
+    width: 263px; 
+}
+
+.sidenav-drawer-footer{
+    position: fixed;
+    margin: 5px;
+}

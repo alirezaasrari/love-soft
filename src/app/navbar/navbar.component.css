@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    background-color: #1E90FF;
+    height: 40px;
+    width: 100%;
+}
+
+.nav-li{
+ margin-left: 15px;
+}
+
+.navbar div ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.mat-toolbar-multiple-rows {
+    min-height: 40px;
+}
+
+*{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+}
+
+.item-name{
+    margin-right: 10px;
+}
+
+.add-logo{
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

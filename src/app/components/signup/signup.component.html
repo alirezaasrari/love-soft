@@ -1,0 +1,48 @@
+<div class="form-container mat-elevation-z5">
+  <h1>ثبت نام</h1>
+  <form [formGroup]="signupForm">
+    <mat-form-field>
+      <input matInput placeholder="name" formControlName="name"/>
+      <!--<mat-error *ngIf="name?.errors?.['required']">
+        وارد کردن نام الزامی است
+      </mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="family" formControlName="family" />
+      <!--<mat-error *ngIf="family?.errors?.['required']">
+        وارد کردن نام خانوادگی الزامی است
+      </mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="email" formControlName="email" />
+      <!--<mat-error *ngIf="email?.errors?.['required']">
+        وارد کردن پسورد الزامی است
+      </mat-error>-->
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="phone" formControlName="phone" />
+        <!--<mat-error *ngIf="email?.errors?.['required']">
+          وارد کردن شماره تلفن الزامی است
+        </mat-error>-->
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="password" formControlName="password" />
+        <!--<mat-error *ngIf="email?.errors?.['required']">
+          وارد کردن شماره تلفن الزامی است
+        </mat-error>-->
+      </mat-form-field>
+      <p style="display: flex;">
+        <label for="avatar">یک تصویر انتخاب کنید </label>
+          <input type="file" name="avatar"
+            accept="image/png, image/jpeg">
+       </p>
+    <div class="center margin-top">
+      <button mat-raised-button color="primary" type="submit">ثبت نام</button>
+    </div>
+
+    <span class="center margin-top"
+      >ثبت نام کرده اید؟
+      <a href="login" class="sign-up-link">ورود کنید!</a>
+    </span>
+  </form>
+</div>

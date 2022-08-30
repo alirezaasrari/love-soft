@@ -1,0 +1,36 @@
+.detail-header{
+    display: flex;
+    height: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.detail-header div ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.detail-header div ul li{
+    margin-left: 20px;
+}
+
+*{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.blue{
+    color: #1E90FF;
+}
+
+.mat-toolbar-multiple-rows {
+    min-height: 20px;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+}

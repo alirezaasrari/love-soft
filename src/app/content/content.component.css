@@ -1,0 +1,156 @@
+/*.example-container {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+*/
+mat-drawer-container{
+    direction: rtl;
+}
+
+mat-drawer{
+    width: 300px;
+    direction: rtl;
+}
+
+
+.content-tools{
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #F1F2F6;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.content-search{
+    width: 320px;
+    height: 32px;
+    border: #A4B0BE solid 1px;
+    flex-wrap: wrap;
+}
+
+.content-search-mini{
+    min-width: 226px;
+    height: 32px;
+    border: #A4B0BE solid 1px;
+    flex-wrap: wrap;
+}
+
+
+
+.content-tools-second-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.coordinator{
+    margin-right: 5px;
+}
+
+.content-tools-icon{
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.content-tools-second-row-left{
+    display: flex;
+}
+
+.add-item-new{
+    width: 112px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.right-item{
+    width: 80px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.card-content{
+    direction: rtl;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F1F2F6;
+    min-height: 480px;
+    padding: 2px;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: stretch;
+}
+
+.card-content-mini{
+    direction: rtl;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F1F2F6;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
+.rolls-select{
+    width: 160px;
+    height: 32px;
+    border: #A4B0BE solid 1px;
+    margin-left: 5px;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-all-row{
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    direction: rtl;
+    box-shadow: 5px 10px 8px 8px #888888;
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 516px;
+}
+
+
+.select-all-cards{
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+}
