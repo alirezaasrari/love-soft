@@ -14,8 +14,9 @@ export class DrawerRollAddComponent implements OnInit {
   color = '#ff0000';
   rollselected: string;
   roll: string;
+  selectedValue : string;
   fireAddEvent() {
-    this.rollselected = this.roll;
+    this.rollselected = this.selectedValue;
     this.onAdd.emit(this.rollselected);
   }
   chips = [
