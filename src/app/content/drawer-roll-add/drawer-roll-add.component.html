@@ -5,23 +5,15 @@
       <button class="clear-button">
         <mat-icon>clear</mat-icon>
       </button>
-      <p style="font-weight: bold">نقش جدید</p>
+      <p style="font-weight: bold; font-size: 19px;">نقش جدید</p>
       <p style="flex-grow: 1"></p>
-    </div>
-    <div>
-      <input
-        type="color"
-        class="content-search-mini"
-        [(ngModel)]="color"
-        placeholder="جستجو ..."
-      />
     </div>
     <div>
       <input
         type="text"
         class="content-search-mini"
         [(ngModel)]="personname"
-        placeholder="نام فرد متقاضی نقش ..."
+        placeholder="نام نقش ..."
       />
     </div>
   </div>
@@ -55,7 +47,7 @@
     می توانید این بخش را بعد از ساختن نقش کامل کنید
     <div>
       <button
-        style="margin: 5px"
+        style="margin: 5px; border-radius: 17px;"
         *ngFor="let chip of chips"
         mat-raised-button
         disabled
@@ -63,9 +55,9 @@
         {{ chip.name }}
       </button>
       <button
-        style="margin: 5px"
         mat-raised-button
-        style="background-color: #1e90ff; color: #ffffff"
+        style="background-color: #1e90ff; color: #ffffff
+         ;margin: 5px; border-radius: 30px;"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -103,6 +95,15 @@
     </div>
   </div>
 </div>
+<div style="margin-right: 17px;">
+  <p>برای نقش یک رنگ انتخاب کنید...</p>
+  <input
+    type="color"
+    class="content-search-mini"
+    [(ngModel)]="color"
+    placeholder="جستجو ..."
+  />
+</div>
 <div class="sidenav-drawer-footer" *ngIf="!deviceXs">
   <button
     mat-stroked-button
@@ -138,7 +139,7 @@
   <button
     (click)="fireAddEvent()"
     mat-stroked-button
-    style="font-weight: bold"
+    style="font-weight: bold; color:#1e90ff"
   >
     ایجاد و خروج
   </button>
