@@ -36,6 +36,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import {MatInputModule} from '@angular/material/input';
 import { DrawerRollAddComponent } from './content/drawer-roll-add/drawer-roll-add.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MenuComponent } from './content/card/menu/menu.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     LoginComponent,
     SignupComponent,
     DrawerRollAddComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
