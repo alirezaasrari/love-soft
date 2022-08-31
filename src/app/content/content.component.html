@@ -102,41 +102,23 @@
                 />
               </svg> </span
           ></a>
-          <button (click)="opened = !opened" mat-button *ngIf="!deviceXs">
-            <span class="add-item-new">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="74.679"
-                height="18.25"
-                viewBox="0 0 74.679 18.25"
-              >
-                <g
-                  id="Group_2797"
-                  data-name="Group 2797"
-                  transform="translate(-1153 -262)"
-                >
-                  <text
-                    id="نقش_جدید"
-                    data-name="نقش جدید"
-                    transform="translate(1204 275)"
-                    fill="#1e90ff"
-                    font-size="12"
-                    font-family="SegoeUI-Bold, Segoe UI"
-                    font-weight="700"
-                  >
-                    <tspan x="-50.402" y="0">نقش جدید</tspan>
-                  </text>
-                  <path
-                    id="icons8_add_9"
-                    d="M11,3a8,8,0,1,0,8,8A8.009,8.009,0,0,0,11,3Zm0,1.231A6.769,6.769,0,1,1,4.231,11,6.761,6.761,0,0,1,11,4.231Zm-.615,3.692v2.462H7.923v1.231h2.462v2.462h1.231V11.615h2.462V10.385H11.615V7.923Z"
-                    transform="translate(1208.429 261)"
-                    fill="#1e90ff"
-                    stroke="#1e90ff"
-                    stroke-width="0.5"
-                  />
-                </g>
-              </svg>
-            </span>
+          <button class="add-roll-button" (click)="opened = !opened" mat-button *ngIf="!deviceXs">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16.5"
+              height="16.5"
+              viewBox="0 0 16.5 16.5"
+            >
+              <path
+                id="icons8_add_9"
+                d="M11,3a8,8,0,1,0,8,8A8.009,8.009,0,0,0,11,3Zm0,1.231A6.769,6.769,0,1,1,4.231,11,6.761,6.761,0,0,1,11,4.231Zm-.615,3.692v2.462H7.923v1.231h2.462v2.462h1.231V11.615h2.462V10.385H11.615V7.923Z"
+                transform="translate(-2.75 -2.75)"
+                fill="#1e90ff"
+                stroke="#1e90ff"
+                stroke-width="0.5"
+              />
+            </svg>
+            افزودن نقش جدید
           </button>
         </div>
         <div>
@@ -193,21 +175,31 @@
       </div>
       <div class="select-all-row">
         <div class="select-all-cards">
-        <input type="checkbox" [(ngModel)]="selected"/>
-        انتخاب همه
-      </div>
+          <input type="checkbox" [(ngModel)]="selected" />
+          انتخاب همه
+        </div>
       </div>
     </div>
     <div class="card-content" *ngIf="!deviceXs">
-      <app-card *ngFor="let card of cards" [selected]="selected" [selected]="selected"
-      [rollname]="card.roll" [nameColor]="card.titleColor" [personName]="card.name"
+      <app-card
+        *ngFor="let card of cards"
+        [selected]="selected"
+        [selected]="selected"
+        [rollname]="card.roll"
+        [nameColor]="card.titleColor"
+        [personName]="card.name"
       ></app-card>
     </div>
     <div class="card-content-mini" *ngIf="deviceXs">
-      <app-card *ngFor="let card of cards" [selected]="selected" [selected]="selected"
-      [rollname]="card.roll" [nameColor]="card.titleColor" [personName]="card.name"
+      <app-card
+        *ngFor="let card of cards"
+        [selected]="selected"
+        [selected]="selected"
+        [rollname]="card.roll"
+        [nameColor]="card.titleColor"
+        [personName]="card.name"
       >
-    </app-card>
+      </app-card>
       <mat-toolbar class="footer">
         <mat-toolbar-row>
           <span>
