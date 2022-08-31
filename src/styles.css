@@ -3,9 +3,9 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: IRANSansWebKE, "Helvetica Neue", sans-serif; }
 
-*{
+/**{
     direction: rtl !important;
-}
+}*/
 
 @font-face{
     font-family : 'IRANSansWebKE';

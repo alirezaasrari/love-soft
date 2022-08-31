@@ -30,7 +30,7 @@
       <mat-form-field appearance="fill" class="sidenav-secondpart-select">
         <mat-label>نقش ها</mat-label>
         <mat-select [(value)] = "selectedValue" >
-          <mat-option>None</mat-option>
+          <mat-option>هیچکدام</mat-option>
           <mat-option *ngFor="let roll of rolls" [value]="roll">{{
             roll
           }}</mat-option>
