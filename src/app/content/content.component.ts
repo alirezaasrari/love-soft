@@ -19,8 +19,8 @@ export class ContentComponent implements OnInit {
   opened = false;
   titleColor: string;
   newCardItem: { roll: string, titleColor:string, name: string };
-  cards = [{ roll: 'حسابدار',titleColor:'#1d7137', name:'راضیه' },
-   { roll: 'مدیر',titleColor:'#5271b4', name:'راضیه' }];
+  cards = [{ roll: 'حسابدار',titleColor:'#1d7137', name:'ساناز' },
+   { roll: 'مدیر',titleColor:'#5271b4', name:'محمد' }];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
       duration: 3000,
