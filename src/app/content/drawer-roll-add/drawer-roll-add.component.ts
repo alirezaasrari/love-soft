@@ -12,11 +12,11 @@ interface Food {
 export class DrawerRollAddComponent implements OnInit {
   @Output() onAdd = new EventEmitter();
   color = '#ff0000';
-  rollselected: string;
+  rollselected: {name:string,theme:string};
   roll: string;
   selectedValue : string;
-  fireAddEvent() {
-    this.rollselected = this.selectedValue;
+  fireAddEvent() { 
+    this.rollselected = {name:this.selectedValue,theme:this.color};
     this.onAdd.emit(this.rollselected);
   }
   chips = [
@@ -26,7 +26,7 @@ export class DrawerRollAddComponent implements OnInit {
     { name: 'گلاله توکل' },
   ];
   
-  rolls: string[] = ['مدیر', 'انباردار', 'کارشناس'];
+  rolls: string[] = ['حسابدار','خدمات','مدیر', 'انباردار', 'کارشناس'];
   constructor() {}
 
   ngOnInit(): void {}

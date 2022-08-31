@@ -200,7 +200,7 @@
     </div>
     <div class="card-content" *ngIf="!deviceXs">
       <app-card *ngFor="let card of cards" [selected]="selected" [selected]="selected"
-      [rollname]="card.roll"
+      [rollname]="card.roll" [nameColor]="card.titleColor"
       ></app-card>
     </div>
     <div class="card-content-mini" *ngIf="deviceXs">
