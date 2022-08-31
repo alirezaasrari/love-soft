@@ -28,8 +28,8 @@
         دارد بعنوان دسترسی پیش فرض انتخاب کرده و آن را ویرایش نمایید
       </p>
       <mat-form-field appearance="fill" class="sidenav-secondpart-select">
-        <mat-label>نقش ها</mat-label>
-        <mat-select [(value)] = "selectedValue" >
+        <mat-label style="color: black;">هیچکدام</mat-label>
+        <mat-select [(value)] = "selectedValue">
           <mat-option>هیچکدام</mat-option>
           <mat-option *ngFor="let roll of rolls" [value]="roll">{{
             roll
@@ -47,7 +47,7 @@
     می توانید این بخش را بعد از ساختن نقش کامل کنید
     <div>
       <button
-        style="margin: 5px; border-radius: 17px;"
+        style="margin: 5px; border-radius: 17px; color:black;"
         *ngFor="let chip of chips"
         mat-raised-button
         disabled

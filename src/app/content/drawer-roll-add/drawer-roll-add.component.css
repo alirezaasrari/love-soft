@@ -22,14 +22,15 @@
 .content-search-mini{
     min-width: 260px;
     height: 32px;
-    border: #707070 solid 1px;
     border-radius: 1px;
+    border: solid 1px;
     flex-wrap: wrap;
     margin-top: 5px;
 }
 
 .sidenav-secondpart-select{
     width: 263px; 
+    border-radius: 5px;
 }
 
 .sidenav-drawer-footer{
