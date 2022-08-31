@@ -35,3 +35,9 @@
     position: fixed;
     margin: 5px;
 }
+
+.sidenav-drawer-footer-mini{
+    position: fixed;
+    top: 608px;
+    margin: 5px;
+}

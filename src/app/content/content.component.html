@@ -204,7 +204,8 @@
       ></app-card>
     </div>
     <div class="card-content-mini" *ngIf="deviceXs">
-      <app-card *ngFor="let card of cards" 
+      <app-card *ngFor="let card of cards" [selected]="selected" [selected]="selected"
+      [rollname]="card.roll" [nameColor]="card.titleColor" [personName]="card.name"
       >
     </app-card>
       <mat-toolbar class="footer">

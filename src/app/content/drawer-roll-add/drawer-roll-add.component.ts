@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MediaObserver, MediaChange } from '@angular/flex-layout';
+import { Subscription } from 'rxjs';
 
 interface Food {
   value: string;
@@ -29,7 +31,21 @@ export class DrawerRollAddComponent implements OnInit {
   ];
   
   rolls: string[] = ['حسابدار','خدمات','مدیر', 'انباردار', 'کارشناس'];
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(
+    public mediaObserver: MediaObserver,
+  ) {}
+  mediaSub: Subscription;
+  deviceXs: boolean;
+  deviceLg: boolean;
+  ngOnInit(): void {
+    this.mediaSub = this.mediaObserver
+      .asObservable()
+      .subscribe((change: MediaChange[]) => {
+        this.deviceXs = change[0].mqAlias === 'xs' ? true : false;
+        this.deviceLg = change[0].mqAlias === 'lg' ? true : false;
+      });
+  }
+  ngOnDestroy(): void {
+    this.mediaSub.unsubscribe();
+  }
 }

@@ -103,7 +103,48 @@
     </div>
   </div>
 </div>
+<div class="sidenav-drawer-footer" *ngIf="!deviceXs">
+  <button
+    mat-stroked-button
+    style="
+      background-color: #1e90ff;
+      color: #ffffff;
+      margin: 5px;
+      font-weight: bold;
+    "
+  >
+    ایجاد و تعیین دسترسی
+  </button>
+  <button
+    (click)="fireAddEvent()"
+    mat-stroked-button
+    style="font-weight: bold"
+  >
+    ایجاد و خروج
+  </button>
+</div>
 <div class="sidenav-drawer-footer">
+  <button
+    mat-stroked-button
+    style="
+      background-color: #1e90ff;
+      color: #ffffff;
+      margin: 5px;
+      font-weight: bold;
+    "
+  >
+    ایجاد و تعیین دسترسی
+  </button>
+  <button
+    (click)="fireAddEvent()"
+    mat-stroked-button
+    style="font-weight: bold"
+  >
+    ایجاد و خروج
+  </button>
+</div>
+<!--footer for mobile view-->
+<div class="sidenav-drawer-footer-mini" *ngIf="deviceXs">
   <button
     mat-stroked-button
     style="
