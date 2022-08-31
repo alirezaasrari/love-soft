@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
   @Input() selected: boolean = false;
   @Input() rollname: string;
   @Input() nameColor: string;
+  @Input() personName: string;
   color: ThemePalette = 'primary';
   checked = this.selected;
   disabled = false;

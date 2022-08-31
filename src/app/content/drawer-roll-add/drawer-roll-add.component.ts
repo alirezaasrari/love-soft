@@ -12,11 +12,13 @@ interface Food {
 export class DrawerRollAddComponent implements OnInit {
   @Output() onAdd = new EventEmitter();
   color = '#ff0000';
-  rollselected: {name:string,theme:string};
+  rollselected: {name:string,theme:string,pname:string};
   roll: string;
   selectedValue : string;
+  personname:string;
   fireAddEvent() { 
-    this.rollselected = {name:this.selectedValue,theme:this.color};
+    this.rollselected = {name:this.selectedValue,
+      theme:this.color,pname:this.personname};
     this.onAdd.emit(this.rollselected);
   }
   chips = [

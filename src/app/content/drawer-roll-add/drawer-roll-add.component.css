@@ -24,6 +24,7 @@
     height: 32px;
     border: #A4B0BE solid 1px;
     flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 .sidenav-secondpart-select{

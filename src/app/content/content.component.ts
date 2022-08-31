@@ -18,9 +18,9 @@ export class ContentComponent implements OnInit {
   selected: boolean = false;
   opened = false;
   titleColor: string;
-  newCardItem: { roll: string, titleColor:string };
-  cards = [{ roll: 'حسابدار',titleColor:'#1d7137' },
-   { roll: 'مدیر',titleColor:'#5271b4' }];
+  newCardItem: { roll: string, titleColor:string, name: string };
+  cards = [{ roll: 'حسابدار',titleColor:'#1d7137', name:'راضیه' },
+   { roll: 'مدیر',titleColor:'#5271b4', name:'راضیه' }];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
       duration: 3000,
@@ -30,7 +30,7 @@ export class ContentComponent implements OnInit {
   numberOfCards = this.cards.length;
   cardAdd(e: any) {
     this.opened = false;
-    this.newCardItem = { roll: e.name , titleColor: e.theme};
+    this.newCardItem = { roll: e.name , titleColor: e.theme, name: e.pname};
     this.cards.push(this.newCardItem);
     this.openSnackBar('نقش اضافه گردید');
   }
