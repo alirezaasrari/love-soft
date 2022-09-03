@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  @Output() onDelete =new EventEmitter();
   constructor() { }
-
+  /*fireCardDelete(e){
+    this.onDelete.emit(e)
+  }*/
   ngOnInit(): void {
   }
 

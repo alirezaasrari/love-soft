@@ -65,3 +65,21 @@
     align-items: center;
     height: 60px;
   }
+
+.card-avatar-roll-population{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-avatar{
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: #ffffff solid 1px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
