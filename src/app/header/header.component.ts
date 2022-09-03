@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent{
 @Input() deviceXs: boolean;
+openHeaderSearch = false;
 toggle = false;
 /*function tuggle():boolean {
   this.toggle = !toggle

@@ -230,12 +230,6 @@
         </div>
       </div>
     </div>
-    <!--<div *ngIf="deviceXs">
-      <button mat-icon-button>
-        <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
-        <span> </span>
-      </button>
-    </div>-->
     <div *ngIf="deviceXs">
       <svg
         id="نوتیفیکیشن"
@@ -267,9 +261,9 @@
 
 
 <mat-toolbar *ngIf="deviceXs">
-  <mat-toolbar-row class="header-mini">
+  <mat-toolbar-row class="header-mini" *ngIf="!openHeaderSearch" >
   <div>
-    <button mat-button><mat-icon class="hamburger-color">dehaze</mat-icon></button>
+    <button mat-button (click)="openHeaderSearch=!openHeaderSearch"><mat-icon class="hamburger-color">dehaze</mat-icon></button>
   </div>
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" width="125.688" height="22.353" viewBox="0 0 125.688 22.353">
@@ -319,9 +313,7 @@
     </div>
   </div>
 </mat-toolbar-row>
-<mat-toolbar-row *ngIf="toggle" class="mini-header-toggler">
-  <div class="search-input-container">
-    <input type="text" class="header-input" placeholder="جستجو ..." />
-  </div>
+<mat-toolbar-row *ngIf="openHeaderSearch" (click)="openHeaderSearch=!openHeaderSearch">
+  <input type="text" *ngIf="openHeaderSearch" class="search-header-hamburger"/>
 </mat-toolbar-row>
 </mat-toolbar>

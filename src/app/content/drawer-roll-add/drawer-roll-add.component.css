@@ -31,6 +31,10 @@
 .sidenav-secondpart-select{
     width: 263px; 
     border-radius: 5px;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    height: 55px;
 }
 
 .sidenav-drawer-footer{
