@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailNavbarComponent implements OnInit {
   @Input() deviceXs: boolean;
   constructor() { }
-
   ngOnInit(): void {
   }
 

@@ -3,6 +3,7 @@ import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -18,6 +19,7 @@ export class ContentComponent implements OnInit {
   selected: boolean = false;
   opened = false;
   titleColor: string;
+ 
   newCardItem: { roll: string; titleColor: string; name: string; };
   cards = [
     {

@@ -45,6 +45,22 @@ mat-drawer{
     flex-wrap: wrap;
 }
 
+.content-tools-first-row{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.select-roll{
+    width: 160px;
+    height: 36px;
+    border: #A4B0BE solid 1px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .coordinator{
     margin-right: 5px;
 }

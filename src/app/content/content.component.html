@@ -12,7 +12,7 @@
     ></app-detail-navbar>
 
     <div class="content-tools">
-      <div class="content-tools-second-row">
+      <div class="content-tools-first-row">
         <input
           type="text"
           *ngIf="!deviceXs"
@@ -26,6 +26,12 @@
           class="content-search-mini"
           placeholder="جستجو ..."
         />
+        <select name="همه نقش ها" class="select-roll" *ngIf="!deviceXs">
+          <option value="همه نقش ها">همه نقش ها</option>
+          <option value="مدیر">مدیر</option>
+          <option value="خدمات">خدمات</option>
+          <option value="حسابدار">حسابدار</option>
+        </select>
         <span class="content-tools-icon coordinator" *ngIf="deviceXs">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,32 +50,6 @@
       </div>
       <div class="content-tools-second-row">
         <div class="content-tools-second-row-left">
-          <span class="content-tools-icon"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-            >
-              <g
-                id="Rectangle_4521"
-                data-name="Rectangle 4521"
-                fill="#fff"
-                stroke="#a4b0be"
-                stroke-width="1"
-              >
-                <rect width="12" height="12" rx="2" stroke="none" />
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="11"
-                  height="11"
-                  rx="1.5"
-                  fill="none"
-                />
-              </g>
-            </svg>
-          </span>
           <a href=""
             ><span class="content-tools-icon">
               <svg
