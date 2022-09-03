@@ -41,3 +41,14 @@ th.mat-header-cell {
 .bottom-text{
   margin: 20px;
 }
+
+.list-view-avatar{
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.list-view-first-col{
+  display: flex;
+}
