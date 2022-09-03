@@ -313,7 +313,10 @@
     </div>
   </div>
 </mat-toolbar-row>
-<mat-toolbar-row *ngIf="openHeaderSearch" (click)="openHeaderSearch=!openHeaderSearch">
-  <input type="text" *ngIf="openHeaderSearch" class="search-header-hamburger"/>
+<mat-toolbar-row *ngIf="openHeaderSearch">
+  <form action="">
+    <input type="text" class="search-header-hamburger"/>
+    <button color="primary" mat-stroked-button (click)="openHeaderSearch=!openHeaderSearch">جستجو</button>
+  </form>
 </mat-toolbar-row>
 </mat-toolbar>

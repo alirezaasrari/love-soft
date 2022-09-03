@@ -71,12 +71,6 @@
     background-color: #414A5C;
 }
 
-/*.header-search-icon{
-    position: absolute;
-    transform: rotate(90deg);
-    color: #A4B0BE;
-}*/
-
 .header-search-icon-mini{
     position: absolute;
     left: 125px;
@@ -84,12 +78,6 @@
     transform: rotate(90deg);
     color: #A4B0BE;
 }
-
-/*.header-input::placeholder{
-    position: absolute;
-    left: 1px;
-    top: 5px;
-}*/
 
 .header-input-mini::placeholder{
     position: absolute;
@@ -143,6 +131,6 @@
 }
 
 .search-header-hamburger{
-    width: 280px;
+    width: 215px;
     background-color: #FFFFFF;
 }
