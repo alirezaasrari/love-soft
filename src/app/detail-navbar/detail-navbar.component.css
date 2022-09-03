@@ -16,6 +16,25 @@
     font-weight: bold;
 }
 
-.hover-color:hover{
+.detail-navbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-navbar-style{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-right: 0px;
+}
+
+.detail-navbar-style li a{
+    text-decoration: none;
+    color: #747D8C;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.detail-navbar-style li a:hover{
     color:#1E90FF;
 }
