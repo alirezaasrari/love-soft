@@ -25,6 +25,8 @@
     font-size: 18px;
     font-weight: bold;
     color: #2F3542;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 .card-title-number{

@@ -13,14 +13,20 @@ export class ContentComponent implements OnInit {
     public mediaObserver: MediaObserver,
     private snackbar: MatSnackBar
   ) {}
-  @Input() roll:string;
+  @Input() roll: string;
   display = false;
   selected: boolean = false;
   opened = false;
   titleColor: string;
-  newCardItem: { roll: string, titleColor:string, name: string };
-  cards = [{ roll: 'حسابدار',titleColor:'#1d7137', name:'ساناز' },
-   { roll: 'مدیر',titleColor:'#5271b4', name:'محمد' }];
+  newCardItem: { roll: string; titleColor: string; name: string; };
+  cards = [
+    {
+      roll: 'حسابدار',
+      titleColor: '#1d7137',
+      name: 'ساناز',
+    },
+    { roll: 'مدیر', titleColor: '#5271b4', name: 'محمد' },
+  ];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
       duration: 3000,
@@ -30,7 +36,7 @@ export class ContentComponent implements OnInit {
   numberOfCards = this.cards.length;
   cardAdd(e: any) {
     this.opened = false;
-    this.newCardItem = { roll: e.name , titleColor: e.theme, name: e.pname};
+    this.newCardItem = { roll: e.name, titleColor: e.theme, name: e.pname };
     this.cards.push(this.newCardItem);
     this.openSnackBar('نقش اضافه گردید');
   }
