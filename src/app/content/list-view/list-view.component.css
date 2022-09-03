@@ -1,6 +1,7 @@
 .list-view{
   box-sizing: border-box;
   padding: 20px;
+  background-color: #F1F2F6;
 }  
 
 table {
