@@ -1,0 +1,28 @@
+<h1 class="text-center">پنل مدیریت</h1>
+<h2 class="text-center">لیست ثبت نام شدگان</h2>
+<table class="table table-striped">
+<thead>
+    <th>ای دی</th>
+    <th>نام</th>
+    <th>نام خانوادگی</th>
+    <th>ایمیل</th>
+    <th>تلفن</th>
+    <th>پسوورد</th>
+    <th>تصویر</th>
+    <th>کد ملی</th>
+    <th>دادن دسترسی</th>
+</thead>
+<tbody>
+<tr *ngFor="let item of registeredList$|async">
+    <td class="text-center">{{item.id}}</td>
+    <td class="text-center">{{item.name}}</td>
+    <td class="text-center">{{item.family}}</td>
+    <td class="text-center">{{item.email}}</td>
+    <td class="text-center">{{item.phone}}</td>
+    <td class="text-center">{{item.password}}</td>
+    <td class="text-center">{{item.picture}}</td>
+    <td class="text-center">{{item.nationalCode}}</td>
+    <td class="text-center"><button mat-stroked-button color="primary">انتصاب به کاربری </button></td>
+</tr>
+</tbody>
+</table>

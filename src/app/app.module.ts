@@ -38,7 +38,9 @@ import { DrawerRollAddComponent } from './content/drawer-roll-add/drawer-roll-ad
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MenuComponent } from './content/card/menu/menu.component';
 import { ToolsHeaderComponent } from './content/tools-header/tools-header.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterService } from '../app/services/register.service'
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { ToolsHeaderComponent } from './content/tools-header/tools-header.compon
     DrawerRollAddComponent,
     MenuComponent,
     ToolsHeaderComponent,
+    AdminPanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,9 +81,10 @@ import { ToolsHeaderComponent } from './content/tools-header/tools-header.compon
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

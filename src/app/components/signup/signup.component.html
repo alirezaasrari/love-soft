@@ -1,48 +1,53 @@
 <div class="form-container mat-elevation-z5">
-  <h1>ثبت نام</h1>
-  <form [formGroup]="signupForm">
-    <mat-form-field>
-      <input matInput placeholder="name" formControlName="name"/>
-      <!--<mat-error *ngIf="name?.errors?.['required']">
-        وارد کردن نام الزامی است
-      </mat-error>-->
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="family" formControlName="family" />
-      <!--<mat-error *ngIf="family?.errors?.['required']">
-        وارد کردن نام خانوادگی الزامی است
-      </mat-error>-->
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="email" formControlName="email" />
-      <!--<mat-error *ngIf="email?.errors?.['required']">
-        وارد کردن پسورد الزامی است
-      </mat-error>-->
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="phone" formControlName="phone" />
-        <!--<mat-error *ngIf="email?.errors?.['required']">
-          وارد کردن شماره تلفن الزامی است
-        </mat-error>-->
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="password" formControlName="password" />
-        <!--<mat-error *ngIf="email?.errors?.['required']">
-          وارد کردن شماره تلفن الزامی است
-        </mat-error>-->
-      </mat-form-field>
-      <p style="display: flex;">
-        <label for="avatar">یک تصویر انتخاب کنید </label>
-          <input type="file" name="avatar"
-            accept="image/png, image/jpeg">
-       </p>
-    <div class="center margin-top">
-      <button mat-raised-button color="primary" type="submit">ثبت نام</button>
+  <h1 class="text-center">ثبت نام</h1>
+  <form>
+    <div class="text-center">
+      <p>
+        <label for="name">نام</label>
+      </p>
+      <input placeholder="نام" type="text" name="name" [(ngModel)]="name" />
     </div>
-
-    <span class="center margin-top"
-      >ثبت نام کرده اید؟
-      <a href="login" class="sign-up-link">ورود کنید!</a>
-    </span>
+    <div class="text-center">
+      <p>
+        <label for="family">نام خانوادگی</label>
+      </p>
+      <input placeholder="نام خانوادگی" type="text" name="family" [(ngModel)]="family" />
+    </div>
+    <div class="text-center">
+      <p>
+        <label for="email">ایمیل</label>
+      </p>
+      <input placeholder="ایمیل" type="text" name="email" [(ngModel)]="email" />
+    </div>
+    <div class="text-center">
+      <p>
+        <label for="phone">تلفن</label>
+      </p>
+      <input placeholder="تلفن" type="number" name="phone" [(ngModel)]="phone" />
+    </div>
+    <div class="text-center">
+      <p>
+        <label for="nationalCode">کد ملی</label>
+      </p>
+      <input placeholder="کدملی" type="text" name="nationalCode" [(ngModel)]="nationalCode" />
+    </div>
+    <div class="text-center">
+      <p>
+        <label for="password">پسوورد</label>
+      </p>
+      <input placeholder="پسوورد" type="number" name="password" [(ngModel)]="password" />
+    </div>
+    <div class="text-center">
+      <p>
+        <label for="picture">تصویر</label>
+      </p>
+      <input placeholder="تصویر" type="file" name="picture" [(ngModel)]="picture" />
+    </div>
+    <div class="text-center" style="margin-top: 20px;">
+      <button (click)="fireAddUser()">ثبت نام</button>
+    </div>
   </form>
+  <span class="center">
+    <a href="adminpanel" class="sign-up-link">ورود به پنل مدیریت!</a>
+  </span>
 </div>
