@@ -19,16 +19,20 @@ export class SignupComponent implements OnInit {
       name: this.name,
       family: this.family,
       email: this.email,
-      phone:this.phone,
       password: this.password,
+      phone:this.phone,
       nationalCode:this.nationalCode,
       picture: this.picture,
     }
-    console.log(registercase);
-    return registercase;
+    this.service.addRegister(registercase).subscribe((res:any)=>{
+      console.log(res)
+      })
+    return registercase
   }
+
+
   ngOnInit(): void {
-    this.service.addRegister(this.fireAddUser());
+    
     }
   }
 
