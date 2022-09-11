@@ -22,7 +22,9 @@
     <td class="text-center">{{item.password}}</td>
     <td class="text-center">{{item.picture}}</td>
     <td class="text-center">{{item.nationalCode}}</td>
-    <td class="text-center"><button id="user{{item.id}}" mat-stroked-button color="primary">
+    <td class="text-center"><button
+        (click)="fireAddToUsersPerson(item.id)"
+        id="user{{item.id}}" mat-stroked-button color="primary">
         انتصاب به کاربری </button>
         <button (click)="fireDeletePerson(item.id)" id="delete{{item.id}}" mat-stroked-button
          color="warn">

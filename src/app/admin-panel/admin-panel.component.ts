@@ -14,12 +14,14 @@ export class AdminPanelComponent implements OnInit {
   registeredList$: Observable<any[]>;
   constructor(public mediaObserver: MediaObserver, private service: RegisterService){}
   fireDeletePerson(id:number):void{
-    this.service.deleteRegister(id).subscribe((res:any)=>console.log(res));
-    this.registeredList$ = this.service.getRegisteredList()
+    this.service.deleteRegister(id).subscribe((res:any)=>{console.log(res);
+    this.ngOnInit()});
   }
+  fireAddToUsersPerson(id:number){}
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
+
   ngOnInit(): void {
     this.registeredList$ = this.service.getRegisteredList()
 
