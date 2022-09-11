@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { RegisterService } from 'src/app/services/register.service';
 @Component({
   selector: 'app-signup',
@@ -6,7 +7,13 @@ import { RegisterService } from 'src/app/services/register.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  constructor(private service: RegisterService) {}
+  constructor(private service: RegisterService ,private snackbar: MatSnackBar) {}
+  openSnackBar(message: string) {
+    this.snackbar.open(message, 'undo', {
+      duration: 3000,
+      horizontalPosition: 'right',
+    });
+  }
   name:string = "";
   family: string = "";
   email: string = "";
@@ -27,6 +34,7 @@ export class SignupComponent implements OnInit {
     this.service.addRegister(registercase).subscribe((res:any)=>{
       console.log(res)
       })
+      this.openSnackBar('ثبت نام با موفقیت انجام شد');
     return registercase
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { Observable } from 'rxjs';
 import { RegisterService } from '../services/register.service';
@@ -12,12 +13,23 @@ import { RegisterService } from '../services/register.service';
 export class AdminPanelComponent implements OnInit {
 
   registeredList$: Observable<any[]>;
-  constructor(public mediaObserver: MediaObserver, private service: RegisterService){}
+  constructor(public mediaObserver: MediaObserver, private service: RegisterService
+    ,private snackbar: MatSnackBar){}
   fireDeletePerson(id:number):void{
     this.service.deleteRegister(id).subscribe((res:any)=>{console.log(res);
     this.ngOnInit()});
+    this.openSnackBar('فرد حذف گردید');
   }
-  fireAddToUsersPerson(id:number){}
+  fireAddToUsers(id:number){
+    this.service.postUserList(id).subscribe((res:any) => console.log(res));
+    this.openSnackBar('به لیست کاربران اضافه گردید');
+  }
+  openSnackBar(message: string) {
+    this.snackbar.open(message, 'undo', {
+      duration: 3000,
+      horizontalPosition: 'right',
+    });
+  }
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
