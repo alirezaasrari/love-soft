@@ -1,53 +1,54 @@
-<div class="form-container mat-elevation-z5">
+<!--<div class="form-container mat-elevation-z5">
   <h1 class="text-center">ثبت نام</h1>
   <form>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="name">نام</label>
-      </p>
       <input placeholder="نام" type="text" name="name" [(ngModel)]="name" />
     </div>
-    <div class="text-center">
-      <p>
-        <label for="family">نام خانوادگی</label>
-      </p>
+    <div class="text-center container-input">
+        <label for="family">فامیل</label>
       <input placeholder="نام خانوادگی" type="text" name="family" [(ngModel)]="family" />
     </div>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="email">ایمیل</label>
-      </p>
       <input placeholder="ایمیل" type="text" name="email" [(ngModel)]="email" />
     </div>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="phone">تلفن</label>
-      </p>
       <input placeholder="تلفن" type="number" name="phone" [(ngModel)]="phone" />
     </div>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="nationalCode">کد ملی</label>
-      </p>
       <input placeholder="کدملی" type="text" name="nationalCode" [(ngModel)]="nationalCode" />
     </div>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="password">پسوورد</label>
-      </p>
       <input placeholder="پسوورد" type="number" name="password" [(ngModel)]="password" />
     </div>
-    <div class="text-center">
-      <p>
+    <div class="text-center container-input">
         <label for="picture">تصویر</label>
-      </p>
       <input placeholder="تصویر" type="file" name="picture" [(ngModel)]="picture" />
     </div>
-    <div class="text-center" style="margin-top: 20px;">
-      <button (click)="fireAddUser()">ثبت نام</button>
+    <div class="text-center" style="margin-top: 20px; margin-bottom: 20px;">
+      <button mat-raised-button color="primary" (click)="fireAddUser()">ثبت نام</button>
     </div>
   </form>
   <span class="center">
-    <a href="adminpanel" class="sign-up-link">ورود به پنل مدیریت!</a>
+    <a href="adminpanel" class="sign-up-link"> برای ورود به پنل مدیریت کلیک کنید!</a>
   </span>
+</div>-->
+
+<div class="main">
+  <form>
+    <h2>ثبت نام</h2>
+    <input type="text" placeholder="نام" [(ngModel)]="name">
+    <input type="text" placeholder=" نام خانوادگی" [(ngModel)]="family">
+    <input type="text" placeholder="ایمیل" [(ngModel)]="email">
+    <input type="number" placeholder="پسوورد" [(ngModel)]="password">
+    <input type="number" placeholder="تلفن" [(ngModel)]="phone">
+    <input type="text" placeholder="کدملی" [(ngModel)]="nationalCode">
+    <input type="file" placeholder="تصویر" [(ngModel)]="picture">
+    <button (click)="fireAddUser()">ثبت نام</button>
+    <p>ادمین هستید؟ &nbsp; &nbsp;<a href="adminpanel">برای ورود به پنل مدیریت اینجا کلیک کنید</a></p>
+  </form>
 </div>

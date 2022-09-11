@@ -52,10 +52,6 @@ body { margin: 0; font-family: IRANSansWebKE, "Helvetica Neue", sans-serif; }
     text-align: center;
 }
 
-/*.mat-snackbar-container{
-    background-color: blue;
-}
-*/
 .green-snackbar {
     background: rgb(51, 76, 12);
   }

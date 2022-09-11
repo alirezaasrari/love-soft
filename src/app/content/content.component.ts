@@ -22,11 +22,11 @@ export class ContentComponent implements OnInit {
   newCardItem: { roll: string; titleColor: string; name: string };
   cards = [
     { 
-      roll: 'حسابدار',
+      roll: 'مدیر',
       titleColor: '#1d7137',
-      name: 'ساناز',
+      name: ' راضیه',
     },
-    { roll: 'مدیر', titleColor: '#5271b4', name: 'محمد' },
+    { roll: 'برنامه نویس', titleColor: '#5271b4', name: 'علیرضا' },
   ];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
