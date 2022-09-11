@@ -27,6 +27,7 @@ export class AdminPanelComponent implements OnInit {
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
       duration: 3000,
+      panelClass: ['green-snackbar'],
       horizontalPosition: 'right',
     });
   }

@@ -38,9 +38,7 @@ export class SignupComponent implements OnInit {
     return registercase
   }
 
-
-  ngOnInit(): void {
-    
+  ngOnInit(): void {  
     }
   }
 
