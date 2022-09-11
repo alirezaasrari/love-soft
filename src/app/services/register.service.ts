@@ -24,7 +24,7 @@ export class RegisterService {
   // }
 
  deleteRegister(id:number|string){
- return this.http.delete(this.registerUrl + `/Register/${id}`)
+ return this.http.delete(this.registerUrl + `/Registers/${id}`)
  }
 
 
