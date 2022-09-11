@@ -41,13 +41,13 @@
 <div class="main">
   <form>
     <h2>ثبت نام</h2>
-    <input type="text" placeholder="نام" [(ngModel)]="name">
-    <input type="text" placeholder=" نام خانوادگی" [(ngModel)]="family">
-    <input type="text" placeholder="ایمیل" [(ngModel)]="email">
-    <input type="number" placeholder="پسوورد" [(ngModel)]="password">
-    <input type="number" placeholder="تلفن" [(ngModel)]="phone">
-    <input type="text" placeholder="کدملی" [(ngModel)]="nationalCode">
-    <input type="file" placeholder="تصویر" [(ngModel)]="picture">
+    <input type="text" placeholder="نام" name="name" [(ngModel)]="name">
+    <input type="text" placeholder=" نام خانوادگی" name="family" [(ngModel)]="family">
+    <input type="text" placeholder="ایمیل" name="email" [(ngModel)]="email">
+    <input type="number" placeholder="پسوورد" name="password" [(ngModel)]="password">
+    <input type="number" placeholder="تلفن" name="phone" [(ngModel)]="phone">
+    <input type="text" placeholder="کدملی" name="nationalcode" [(ngModel)]="nationalCode">
+    <input type="file" placeholder="تصویر" name="picture" [(ngModel)]="picture">
     <button (click)="fireAddUser()">ثبت نام</button>
     <p>ادمین هستید؟ &nbsp; &nbsp;<a href="adminpanel">برای ورود به پنل مدیریت اینجا کلیک کنید</a></p>
   </form>
