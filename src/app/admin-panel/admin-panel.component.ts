@@ -24,7 +24,7 @@ export class AdminPanelComponent implements OnInit {
   fireDeleteUser(id:number):void{
     this.service.deleteUser(id).subscribe((res:any)=>{console.log(res);
     this.ngOnInit()});
-    this.openSnackBar('فرد حذف گردید');
+    this.openSnackBar('کاربر حذف گردید');
   }
   fireAddToUsers(id:number){
     this.service.postUserList({"registerId":id}).subscribe((res:any) => {console.log(res);
