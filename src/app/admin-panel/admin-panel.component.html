@@ -1,7 +1,12 @@
-<h1 class="text-center">پنل مدیریت</h1>
+<div style="padding-right: 10%; padding-left: 10%; padding-top: 5%;">
+<h1 class="text-center" style="font-weight: bold;">پنل مدیریت</h1>
+<br>
+<hr>
+<hr>
+<br>
 <h2 class="text-center">لیست ثبت نام شدگان</h2>
 <table class="table table-striped">
-<thead>
+  <thead>
     <th>ای دی</th>
     <th>نام</th>
     <th>نام خانوادگی</th>
@@ -11,25 +16,77 @@
     <th>تصویر</th>
     <th>کد ملی</th>
     <th>دادن دسترسی</th>
-</thead>
-<tbody>
-<tr *ngFor="let item of registeredList$|async">
-    <td class="text-center">{{item.id}}</td>
-    <td class="text-center">{{item.name}}</td>
-    <td class="text-center">{{item.family}}</td>
-    <td class="text-center">{{item.email}}</td>
-    <td class="text-center">{{item.phone}}</td>
-    <td class="text-center">{{item.password}}</td>
-    <td class="text-center">{{item.picture}}</td>
-    <td class="text-center">{{item.nationalCode}}</td>
-    <td class="text-center"><button
-        (click)="fireAddToUsers(item.id)"
-        id="user{{item.id}}" mat-stroked-button color="primary">
-        انتصاب به کاربری </button>
-        <button (click)="fireDeletePerson(item.id)" id="delete{{item.id}}" mat-stroked-button
-         color="warn">
-            حذف از لیست</button>
-    </td>
-</tr>
-</tbody>
+    <th>حذف از لیست</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of registeredList$ | async">
+      <td class="text-center">{{ item.id }}</td>
+      <td class="text-center">{{ item.name }}</td>
+      <td class="text-center">{{ item.family }}</td>
+      <td class="text-center">{{ item.email }}</td>
+      <td class="text-center">{{ item.phone }}</td>
+      <td class="text-center">{{ item.password }}</td>
+      <td class="text-center">{{ item.picture }}</td>
+      <td class="text-center">{{ item.nationalCode }}</td>
+      <td class="text-center">
+        <button
+          (click)="fireAddToUsers(item.id)"
+          id="user{{ item.id }}"
+          mat-stroked-button
+          color="primary"
+        >
+          انتصاب به کاربری
+        </button>
+      </td>
+      <td class="text-center">
+        <button 
+          (click)="fireDeletePerson(item.id)"
+          id="delete{{ item.id }}"
+          mat-stroked-button
+          color="warn"
+        >
+          حذف از لیست
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
+<br>
+<hr>
+<br>
+<h2 class="text-center">لیست افراد اضافه شده به لیست کاربران</h2>
+<table class="table table-striped">
+  <thead>
+    <th>ای دی</th>
+    <th>ای دی کاربر در لیست ثبت نامی ها</th>
+    <th>دادن دسترسی</th>
+    <th>حذف از لیست</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userList$ | async">
+      <td class="text-center">{{ item.id }}</td>
+      <td class="text-center">{{ item.registerId }}</td>
+      <td class="text-center">
+        <button
+          (click)="fireAddRoll(item.id)"
+          id="user{{ item.id }}"
+          mat-stroked-button
+          color="primary"
+        >
+          انتصاب به نقش
+        </button>
+      </td>
+      <td class="text-center">
+        <button 
+          (click)="fireDeleteUser(item.id)"
+          id="delete{{ item.id }}"
+          mat-stroked-button
+          color="warn"
+        >
+          حذف از لیست
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

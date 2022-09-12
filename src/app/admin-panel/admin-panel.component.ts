@@ -13,6 +13,7 @@ import { RegisterService } from '../services/register.service';
 export class AdminPanelComponent implements OnInit {
 
   registeredList$: Observable<any[]>;
+  userList$: Observable<any[]>;
   constructor(public mediaObserver: MediaObserver, private service: RegisterService
     ,private snackbar: MatSnackBar){}
   fireDeletePerson(id:number):void{
@@ -20,9 +21,17 @@ export class AdminPanelComponent implements OnInit {
     this.ngOnInit()});
     this.openSnackBar('فرد حذف گردید');
   }
+  fireDeleteUser(id:number):void{
+    this.service.deleteUser(id).subscribe((res:any)=>{console.log(res);
+    this.ngOnInit()});
+    this.openSnackBar('فرد حذف گردید');
+  }
   fireAddToUsers(id:number){
-    this.service.postUserList(id).subscribe((res:any) => console.log(res));
+    this.service.postUserList({"registerId":id}).subscribe((res:any) => {console.log(res);
+    this.ngOnInit()});
     this.openSnackBar('به لیست کاربران اضافه گردید');
+  }
+  fireAddRoll(id:number){
   }
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
@@ -36,7 +45,8 @@ export class AdminPanelComponent implements OnInit {
   deviceLg: boolean;
 
   ngOnInit(): void {
-    this.registeredList$ = this.service.getRegisteredList()
+    this.registeredList$ = this.service.getRegisteredList();
+    this.userList$ = this.service.getUsersList()
 
     this.mediaSub = this.mediaObserver
       .asObservable()

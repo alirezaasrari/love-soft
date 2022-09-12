@@ -34,4 +34,12 @@ export class RegisterService {
 postUserList(data:any){
   return this.http.post(this.registerUrl + '/Users', data)
 }
+
+updateUser(id:number|string, data:any){
+  return this.http.put(this.registerUrl + `/Users/${id}`, data)
+}
+
+deleteUser(id:number|string){
+  return this.http.delete(this.registerUrl + `/Users/${id}`)
+  }
 }
