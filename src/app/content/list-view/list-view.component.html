@@ -32,7 +32,7 @@
     </ng-container>
 
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
+    <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>نام</th>
       <td mat-cell *matCellDef="let element">
         <div class="list-view-first-col">
@@ -78,41 +78,41 @@
               </g>
             </svg>
           </div>
-          {{ element.position }}
+          {{ element.name }}
         </div>
       </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="usercode">
       <th mat-header-cell *matHeaderCellDef>کدکاربر</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.code }}</td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
+    <ng-container matColumnDef="roll">
       <th mat-header-cell *matHeaderCellDef>نقش</th>
       <td mat-cell *matCellDef="let element">
-        <span class="list-position-color">{{ element.weight }}</span>
+        <span class="list-position-color">{{ element.roll }}</span>
       </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
+    <ng-container matColumnDef="dateofjoin">
       <th mat-header-cell *matHeaderCellDef>تاریخ عضویت</th>
-      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.dateofjoin }}</td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbo">
+    <ng-container matColumnDef="email">
       <th mat-header-cell *matHeaderCellDef>ایمیل</th>
-      <td mat-cell *matCellDef="let element">{{ element.symbo }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.email }}</td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbl">
+    <ng-container matColumnDef="lastactivity">
       <th mat-header-cell *matHeaderCellDef>اخرین فعالیت</th>
-      <td mat-cell *matCellDef="let element">{{ element.symbl }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.lastactivity }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

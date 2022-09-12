@@ -15,27 +15,28 @@
     <th>پسوورد</th>
     <th>تصویر</th>
     <th>کد ملی</th>
-    <th>دادن دسترسی</th>
-    <th>حذف از لیست</th>
+    <th>گرفتن دسترسی به کاربری</th>
+    <th>حذف از لیست ثبت نام شدگان</th>
   </thead>
   <tbody>
     <tr *ngFor="let item of registeredList$ | async">
-      <td class="text-center">{{ item.id }}</td>
-      <td class="text-center">{{ item.name }}</td>
-      <td class="text-center">{{ item.family }}</td>
-      <td class="text-center">{{ item.email }}</td>
-      <td class="text-center">{{ item.phone }}</td>
-      <td class="text-center">{{ item.password }}</td>
-      <td class="text-center">{{ item.picture }}</td>
-      <td class="text-center">{{ item.nationalCode }}</td>
-      <td class="text-center">
+      <td class="text-center bold">{{ item.name }}</td>
+      <td class="text-center bold">{{ item.id }}</td>
+      <td class="text-center bold">{{ item.family }}</td>
+      <td class="text-center bold">{{ item.email }}</td>
+      <td class="text-center bold">{{ item.phone }}</td>
+      <td class="text-center bold">{{ item.password }}</td>
+      <td class="text-center bold">{{ item.picture }}</td>
+      <td class="text-center bold">{{ item.nationalCode }}</td>
+      <td class="text-center bold">
         <button
           (click)="fireAddToUsers(item.id)"
           id="user{{ item.id }}"
           mat-stroked-button
           color="primary"
+          class="bold"
         >
-          انتصاب به کاربری
+          افزودن به لیست کاربران
         </button>
       </td>
       <td class="text-center">
@@ -44,8 +45,9 @@
           id="delete{{ item.id }}"
           mat-stroked-button
           color="warn"
+          class="bold"
         >
-          حذف از لیست
+           حذف از لیست ثبت نام شدگان
         </button>
       </td>
     </tr>
@@ -59,21 +61,22 @@
   <thead>
     <th>ای دی</th>
     <th>ای دی کاربر در لیست ثبت نامی ها</th>
-    <th>دادن دسترسی</th>
-    <th>حذف از لیست</th>
+    <th>گرفتن نقش</th>
+    <th>حذف از لیست کاربران</th>
   </thead>
   <tbody>
     <tr *ngFor="let item of userList$ | async">
-      <td class="text-center">{{ item.id }}</td>
-      <td class="text-center">{{ item.registerId }}</td>
-      <td class="text-center">
+      <td class="text-center bold">{{ item.id }}</td>
+      <td class="text-center bold">{{ item.registerId }}</td>
+      <td class="text-center bold">
         <button
           (click)="fireAddRoll(item.id)"
           id="user{{ item.id }}"
           mat-stroked-button
           color="primary"
+          class="bold"
         >
-          انتصاب به نقش
+          منتصب کردن کاربر به یک نقش
         </button>
       </td>
       <td class="text-center">
@@ -82,8 +85,9 @@
           id="delete{{ item.id }}"
           mat-stroked-button
           color="warn"
+          class="bold"
         >
-          حذف از لیست
+          حذف از لیست کاربران
         </button>
       </td>
     </tr>
