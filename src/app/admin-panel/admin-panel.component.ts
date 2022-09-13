@@ -14,6 +14,7 @@ import { IUser } from '../Ishapes/shapes';
 export class AdminPanelComponent implements OnInit {
   registeredList$: Observable<any[]>;
   userList$: Observable<any[]>;
+  rollList$: Observable<any[]>;
   constructor(
     public mediaObserver: MediaObserver,
     private service: RegisterService,
@@ -34,14 +35,26 @@ export class AdminPanelComponent implements OnInit {
     this.openSnackBar('کاربر حذف گردید');
   }
   fireAddToUsers(id: number) {
-    this.service.postUserList({ registerId: id }).subscribe((res: any) => {
+    this.service.postUser({ registerId: id }).subscribe((res: any) => {
       console.log(res);
       this.ngOnInit();
     });
     this.openSnackBar('به لیست کاربران اضافه گردید');
   }
-  fireAddRoll(id: number) {}
+  fireAddRoll(id: number) {
+    this.service.postRoll({ userId: id }).subscribe((res: any) => {
+      console.log(res);
+      this.ngOnInit();
+    });
+    this.openSnackBar('به لیست نقش ها اضافه گردید');
+  }
 
+  fireDeleteRoll(id: number): void {
+    this.service.deleteRoll(id).subscribe((res: any) => {
+      this.ngOnInit();
+    });
+    this.openSnackBar('نقش حذف گردید');
+  }
   searchCase: number = 37;
   
   User: IUser = {name:'',family: '', email: '',
@@ -75,6 +88,7 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit(): void {
     this.registeredList$ = this.service.getRegisteredList();
     this.userList$ = this.service.getUsersList();
+    this.rollList$ = this.service.getRollList();
 
     this.mediaSub = this.mediaObserver
       .asObservable()

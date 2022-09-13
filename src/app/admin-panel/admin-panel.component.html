@@ -3,6 +3,7 @@
 <br>
 <hr>
 <hr>
+<hr>
 <br>
 <h2 class="text-center">لیست ثبت نام شدگان</h2>
 <table class="table table-striped">
@@ -55,6 +56,7 @@
 </table>
 <br>
 <hr>
+<hr>
 <br>
 <h2 class="text-center">لیست کاربران</h2>
 <div class="text-center bold">
@@ -106,6 +108,11 @@
       <td class="text-center bold">{{ item.id }}</td>
       <td class="text-center bold">{{ item.registerId }}</td>
       <td class="text-center bold">
+        <select name="rolls" style="margin: 10px;">
+          <option *ngFor="let rollname of rollList$ 
+          | async" [value]="rollname.name">
+            {{rollname.name}}</option>
+        </select>
         <button
           (click)="fireAddRoll(item.id)"
           id="user{{ item.id }}"
@@ -113,7 +120,7 @@
           color="primary"
           class="bold"
         >
-          منتصب کردن کاربر به یک نقش
+           منتصب کردن کاربر به نقش انتخاب شده
         </button>
       </td>
       <td class="text-center">
@@ -130,4 +137,44 @@
     </tr>
   </tbody>
 </table>
+
+<br>
+<hr>
+<hr>
+<br>
+
+<h2 class="text-center">لیست نقش ها</h2>
+
+<table class="table table-striped">
+  <thead>
+    <th>ای دی</th>
+    <th>عنوان نقش</th>  
+    <th>ای دی کاربر در لیست کاربران ها</th>
+    <th>کاربران دارای این نقش</th>
+    <th>حذف از لیست نقش ها</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of rollList$ | async">
+      <td class="text-center bold">{{ item.id }}</td>
+      <td class="text-center bold">{{item.name}}</td>
+      <td class="text-center bold">{{ item.userId }}</td>
+      <td class="text-center bold">
+          
+      </td>
+      <td class="text-center">
+        <button 
+          (click)="fireDeleteRoll(item.id)"
+          id="delete{{ item.id }}"
+          mat-stroked-button
+          color="warn"
+          class="bold"
+        >
+          حذف نقش
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
 </div>

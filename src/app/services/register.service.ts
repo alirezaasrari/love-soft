@@ -31,11 +31,15 @@ export class RegisterService {
  return this.http.delete(this.registerUrl + `/Registers/${id}`)
  }
 // Users services
- getUsersList(): Observable<any[]>{
+getUsersList(): Observable<any[]>{
   return this.http.get<any>(this.registerUrl + '/Users');
 }
 
-postUserList(data:any){
+getUserById(id:number){
+  return this.http.get(this.registerUrl + `/Users/${id}`);
+}
+
+postUser(data:any){
   return this.http.post(this.registerUrl + '/Users', data)
 }
 
@@ -46,4 +50,25 @@ updateUser(id:number|string, data:any){
 deleteUser(id:number|string){
   return this.http.delete(this.registerUrl + `/Users/${id}`)
   }
+
+  getRollList(): Observable<any[]>{
+    return this.http.get<any>(this.registerUrl + '/Rolls');
+  }
+
+  getRollById(id:number){
+    return this.http.get(this.registerUrl + `/Rolls/${id}`);
+  }
+  
+  postRoll(data:any){
+    return this.http.post(this.registerUrl + '/Rolls', data)
+  }
+  
+  updateRoll(id:number|string, data:any){
+    return this.http.put(this.registerUrl + `/Rollss/${id}`, data)
+  }
+  
+  deleteRoll(id:number|string){
+    return this.http.delete(this.registerUrl + `/Rolls/${id}`)
+    }
+  
 }
