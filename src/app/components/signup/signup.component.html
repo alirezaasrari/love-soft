@@ -39,16 +39,81 @@
 </div>-->
 
 <div class="main">
-  <form>
+  <form [formGroup]="signupForm">
     <h2>ثبت نام</h2>
-    <input type="text" placeholder="نام" name="name" [(ngModel)]="name">
-    <input type="text" placeholder=" نام خانوادگی" name="family" [(ngModel)]="family">
-    <input type="text" placeholder="ایمیل" name="email" [(ngModel)]="email">
-    <input type="number" placeholder="پسوورد" name="password" [(ngModel)]="password">
-    <input type="number" placeholder="تلفن" name="phone" [(ngModel)]="phone">
-    <input type="text" placeholder="کدملی" name="nationalcode" [(ngModel)]="nationalCode">
-    <input type="file" placeholder="تصویر" name="picture" [(ngModel)]="picture">
-    <button style="cursor:pointer;" (click)="fireAddUser()">ثبت نام</button>
-    <p>ادمین هستید؟ &nbsp; &nbsp;<a href="adminpanel">برای ورود به پنل مدیریت اینجا کلیک کنید</a></p>
+    <input type="text" placeholder="نام" name="name" [(ngModel)]="name" formControlName="Name"/>
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Name && Name.invalid"
+      >نام رابه صورت صحیح وارد کنید</span
+    >
+    <input
+      type="text"
+      placeholder=" نام خانوادگی"
+      name="Family"
+      [(ngModel)]="family"
+      formControlName="Family"
+    />
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Family && Family.invalid"
+      >فامیل رابه صورت صحیح وارد کنید</span
+    >
+    <input type="text" placeholder="ایمیل" name="Email" [(ngModel)]="email"
+    formControlName="Email" />
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Email && Email.invalid"
+      >ایمیل رابه صورت صحیح وارد کنید</span
+    >
+    <input
+      type="number"
+      placeholder="پسوورد"
+      name="Password"
+      [(ngModel)]="password"
+      formControlName="Password"
+    />
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Password && Password.invalid"
+      >پسوورد رابه صورت صحیح وارد کنید</span
+    >
+    <input type="number" placeholder="تلفن" name="Phone" [(ngModel)]="phone" 
+    formControlName="Number"/>
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Phone && Phone.invalid"
+      >تلفن رابه صورت صحیح وارد کنید</span
+    >
+    <input
+      type="text"
+      placeholder="کدملی"
+      name="Nationalcode"
+      [(ngModel)]="nationalCode"
+      formControlName="NationalCode"
+    />
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="NationalCode && NationalCode.invalid"
+      >کدملی رابه صورت صحیح وارد کنید</span
+    >
+    <input
+      type="file"
+      placeholder="تصویر"
+      name="Picture"
+      [(ngModel)]="picture"
+      formControlName="Picture"
+    />
+    <span
+      style="color: red; margin: 5px"
+      *ngIf="Picture && Picture.invalid"
+      >تصویر رابه صورت صحیح انتخاب کنید</span
+    >
+    <button style="cursor: pointer" (click)="fireAddUser()">ثبت نام</button>
+    <p>
+      ادمین هستید؟ &nbsp; &nbsp;<a href="adminpanel"
+        >برای ورود به پنل مدیریت اینجا کلیک کنید</a
+      >
+    </p>
   </form>
 </div>
