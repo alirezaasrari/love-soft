@@ -1,5 +1,5 @@
 <div style="padding-right: 10%; padding-left: 10%; padding-top: 5%;">
-<h1 class="text-center" style="font-weight: bold;">پنل مدیریت</h1>
+<h1 class="text-center" style="font-weight: bold;"> ---- پنل مدیریت ----</h1>
 <br>
 <hr>
 <hr>
@@ -20,8 +20,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of registeredList$ | async">
-      <td class="text-center bold">{{ item.name }}</td>
       <td class="text-center bold">{{ item.id }}</td>
+      <td class="text-center bold">{{ item.name }}</td>
       <td class="text-center bold">{{ item.family }}</td>
       <td class="text-center bold">{{ item.email }}</td>
       <td class="text-center bold">{{ item.phone }}</td>
@@ -57,6 +57,43 @@
 <hr>
 <br>
 <h2 class="text-center">لیست کاربران</h2>
+<div class="text-center bold">
+  <p>ای دی کاربر در لیست ثبت نامی ها را سرچ و اطلاعات را مشاهده کنید</p>
+  <form>
+    <input type="number" style="width: 400px; height: 32px; margin: 10px;" name="id" [(ngModel)]="searchCase"
+     placeholder="ای دی را وارد و اطلاعات را دریافت کنید">
+     <button mat-raised-button color="primary" (click)="search(searchCase)">جستجو</button>
+  </form>
+  <br>
+
+  <table class="table table-striped">
+    <thead>
+      <th>نام</th>
+      <th>نام خانوادگی</th>
+      <th>ایمیل</th>
+      <th>تلفن</th>
+      <th>پسوورد</th>
+      <th>تصویر</th>
+      <th>کد ملی</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center bold">{{User.name}}</td>
+        <td class="text-center bold">{{User.family}}</td>
+        <td class="text-center bold">{{User.email}}</td>
+        <td class="text-center bold">{{User.phone}}</td>
+        <td class="text-center bold">{{User.password}}</td>
+        <td class="text-center bold">{{User.picture}}</td>
+        <td class="text-center bold">{{User.nationalCode}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <hr>
+</div>
+<br>
 <table class="table table-striped">
   <thead>
     <th>ای دی</th>

@@ -2,7 +2,7 @@
   <h1>ورود</h1>
   <form [formGroup]="loginForm">
     <mat-form-field>
-      <input matInput placeholder="Email address" formControlName="email" />
+      <input matInput placeholder="Email address" formControlName="email" [(ngModel)]="user"/>
       <mat-error *ngIf="email?.errors?.['required']">
         وارد کردن ایمیل الزامی است
       </mat-error>
@@ -12,14 +12,14 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="password" formControlName="password" />
+      <input matInput placeholder="password" formControlName="password" [(ngModel)]="pass" />
       <mat-error *ngIf="email?.errors?.['required']">
         وارد کردن پسورد الزامی است
       </mat-error>
     </mat-form-field>
 
     <div class="center margin-top">
-      <button mat-raised-button color="primary" type="submit">ورود</button>
+      <button (click)="loginToAdminPanel()" mat-raised-button color="primary" type="submit">ورود</button>
     </div>
 
     <span class="center margin-top"

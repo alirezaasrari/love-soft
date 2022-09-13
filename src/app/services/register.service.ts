@@ -15,6 +15,10 @@ export class RegisterService {
     return this.http.get<any>(this.registerUrl + '/Registers');
   }
 
+  getRegisteredById(id:number){
+    return this.http.get(this.registerUrl + `/Registers/${id}`);
+  }
+
   addRegister(data:any){
     return this.http.post(this.registerUrl + '/Registers', data)
   }

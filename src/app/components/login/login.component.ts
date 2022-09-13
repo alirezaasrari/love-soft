@@ -8,12 +8,22 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [Validators.required]),
     password: new FormControl('', Validators.required),
   });
   @Input() deviceXs: boolean;
   constructor() {}
+   
+  user = '';
+  pass = '';
 
+  loginToAdminPanel(){
+    if(this.user == 'admin' && this.pass == 'admin'){
+      
+    }else{
+     
+    }
+  }
   ngOnInit(): void {}
 
   get email() {
