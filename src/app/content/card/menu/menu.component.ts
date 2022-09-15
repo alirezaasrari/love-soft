@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,10 +8,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   @Output() onDelete =new EventEmitter();
-  constructor() { }
-  /*fireCardDelete(e){
-    this.onDelete.emit(e)
-  }*/
+  constructor(private service: RegisterService) {}
+  fireDeleteCard(){
+  // this.service.deleteUser()
+  }
   ngOnInit(): void {
   }
 

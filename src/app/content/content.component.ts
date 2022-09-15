@@ -31,7 +31,7 @@ export class ContentComponent implements OnInit {
     { 
      roll: 'برنامه نویس',
      titleColor: '#5271b4',
-     name: 'علیرضا' },
+     name: 'علیر' },
   ];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
@@ -64,7 +64,7 @@ export class ContentComponent implements OnInit {
             this.cards.push({
               name: res.name,
               roll: 'حسابدار',
-              titleColor:'',
+              titleColor:'red',
             });
            
           });
