@@ -84,16 +84,16 @@ export class AdminPanelComponent implements OnInit {
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
-
+  
   ngOnInit(): void {
     this.registeredList$ = this.service.getRegisteredList();
     this.userList$ = this.service.getUsersList();
     this.rollList$ = this.service.getRollList();
 
     this.mediaSub = this.mediaObserver
-      .asObservable()
+      .asObservable()  
       .subscribe((change: MediaChange[]) => {
-        this.deviceXs = change[0].mqAlias === 'xs' ? true : false;
+        this.deviceXs = change[0].mqAlias === 'xs' ? true : false; 
         this.deviceLg = change[0].mqAlias === 'lg' ? true : false;
       });
   }

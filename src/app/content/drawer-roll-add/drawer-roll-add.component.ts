@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { RegisterService } from 'src/app/services/register.service';
 
 interface Food {
   value: string;
@@ -12,6 +13,7 @@ interface Food {
   styleUrls: ['./drawer-roll-add.component.css'],
 })
 export class DrawerRollAddComponent implements OnInit {
+  rollList$: Observable<any[]>;
   @Output() onAdd = new EventEmitter();
   color = '#ff0000';
   rollselected: {name:string,theme:string,pname:string};
@@ -30,14 +32,15 @@ export class DrawerRollAddComponent implements OnInit {
     { name: 'گلاله توکل' },
   ];
   
-  rolls: string[] = ['حسابدار','خدمات','مدیر', 'انباردار', 'کارشناس'];
   constructor(
     public mediaObserver: MediaObserver,
+    private service: RegisterService,
   ) {}
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
   ngOnInit(): void {
+    this.rollList$ = this.service.getRollList();
     this.mediaSub = this.mediaObserver
       .asObservable()
       .subscribe((change: MediaChange[]) => {

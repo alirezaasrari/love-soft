@@ -14,10 +14,7 @@
       placeholder="جستجو ..."
     />
     <select name="همه نقش ها" class="select-roll">
-      <option value="همه نقش ها">همه نقش ها</option>
-      <option value="مدیر">مدیر</option>
-      <option value="خدمات">خدمات</option>
-      <option value="حسابدار">حسابدار</option>
+      <option *ngFor="let roll of rollList$ | async" value="همه نقش ها">{{roll.name}}</option>
     </select>
   </div>
   <div class="content-tools-second-row">
