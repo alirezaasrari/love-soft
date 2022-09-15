@@ -144,6 +144,16 @@
 <br>
 
 <h2 class="text-center">لیست نقش ها</h2>
+<div class="text-center bold">
+<p>برای افزودن یک نقش جدید می توانید از این قسمت استفاده و نقش را ثبت نمایید</p>
+  <form>
+    <input type="string" style="width: 400px; height: 32px; margin: 10px;"
+     name="id" [(ngModel)]="rollName"
+     placeholder="عنوان نقش را اضافه کنید">
+     <button mat-raised-button color="primary" (click)="fireAddRoll(this.rollName)">افزودن نقش</button>
+  </form>
+</div>
+  <br>
 
 <table class="table table-striped">
   <thead>

@@ -41,8 +41,8 @@ export class AdminPanelComponent implements OnInit {
     });
     this.openSnackBar('به لیست کاربران اضافه گردید');
   }
-  fireAddRoll(id: number) {
-    this.service.postRoll({ userId: id }).subscribe((res: any) => {
+  fireAddRoll(name: string) {
+    this.service.postRoll({ name: name }).subscribe((res: any) => {
       console.log(res);
       this.ngOnInit();
     });
@@ -55,8 +55,9 @@ export class AdminPanelComponent implements OnInit {
     });
     this.openSnackBar('نقش حذف گردید');
   }
-  searchCase: number = 37;
   
+  searchCase: number = 37;
+  rollName: string = '';
   User: IUser = {name:'',family: '', email: '',
   phone: 0, password: 0,picture: '', nationalCode: ''}
 
