@@ -2,6 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
+import { RegisterService } from '../services/register.service';
 
 @Component({
   selector: 'app-content',
@@ -11,7 +12,8 @@ import { Subscription } from 'rxjs';
 export class ContentComponent implements OnInit {
   constructor(
     public mediaObserver: MediaObserver,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private service: RegisterService
   ) {}
   @Input() roll: string;
   display = false;
@@ -26,7 +28,10 @@ export class ContentComponent implements OnInit {
       titleColor: '#1d7137',
       name: ' راضیه',
     },
-    { roll: 'برنامه نویس', titleColor: '#5271b4', name: 'علیرضا' },
+    { 
+     roll: 'برنامه نویس',
+     titleColor: '#5271b4',
+     name: 'علیرضا' },
   ];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
@@ -45,7 +50,28 @@ export class ContentComponent implements OnInit {
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
+  _length: number;
+  registeredId: number[];
   ngOnInit(): void {
+
+    this.service.getUsersList().subscribe((x) => {
+      this._length = x.length;
+      this.registeredId = x.map((s) => s.registerId);
+      for (let i = 0; i < this._length; i++) {
+        this.service
+          .getRegisteredById(this.registeredId[i])
+          .subscribe((res: any) => {
+            this.cards.push({
+              name: res.name,
+              roll: 'حسابدار',
+              titleColor:'',
+            });
+           
+          });
+      }
+    });
+
+
     this.mediaSub = this.mediaObserver
       .asObservable()
       .subscribe((change: MediaChange[]) => {
