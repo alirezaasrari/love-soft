@@ -81,7 +81,7 @@ export class listViewComponent {
           .subscribe((res: any) => {
             this.ELEMENT_DATA.push({
               name: res.name,
-              usercode: '100256',
+              code: res.password,
               roll: 'حسابدار',
               dateofjoin: '1400/12/20',
               email: res.email,
