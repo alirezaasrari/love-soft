@@ -20,16 +20,7 @@ export interface PeriodicElement {
   styleUrls: ['./list-view.component.css'],
 })
 export class listViewComponent {
-  ELEMENT_DATA: any[] = [
-    { 
-    name: '',
-    usercode: '100256',
-    roll: 'حسابدار',
-    dateofjoin: '1400/12/20',
-    email: 'd@gmail.com',
-    lastactivity: 'امروز-10:42',
-    }
-  ];
+  ELEMENT_DATA: any[] = [];
   userList$: Observable<any[]>;
   displayedColumns: string[] = [
     'select',
@@ -93,13 +84,14 @@ export class listViewComponent {
               usercode: '100256',
               roll: 'حسابدار',
               dateofjoin: '1400/12/20',
-              email: 'd@gmail.com',
+              email: res.email,
               lastactivity: 'امروز-10:42',
             });
+            this.dataSource = new MatTableDataSource<any>(
+              this.ELEMENT_DATA
+            );
           });
       }
-      console.log(this.ELEMENT_DATA);
-      this.dataSource = new MatTableDataSource<AnimationPlaybackEvent>(this.ELEMENT_DATA);
     });
 
     this.mediaSub = this.mediaObserver
