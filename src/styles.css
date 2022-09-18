@@ -55,3 +55,7 @@ body { margin: 0; font-family: IRANSansWebKE, "Helvetica Neue", sans-serif; }
 .green-snackbar {
     background: rgb(51, 76, 12);
   }
+
+.mat-checkbox-frame{
+    border-color: #A4B0BE ;
+}
