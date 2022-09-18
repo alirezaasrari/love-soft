@@ -26,12 +26,12 @@ export class ContentComponent implements OnInit {
     { 
       roll: 'مدیر',
       titleColor: '#1d7137',
-      name: ' راضیه',
+      name: ' ',
     },
     { 
      roll: 'برنامه نویس',
      titleColor: '#5271b4',
-     name: 'علیر' },
+     name: '' },
   ];
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
