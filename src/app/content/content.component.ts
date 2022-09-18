@@ -9,12 +9,14 @@ import { RegisterService } from '../services/register.service';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
 })
+
 export class ContentComponent implements OnInit {
   constructor(
     public mediaObserver: MediaObserver,
     private snackbar: MatSnackBar,
     private service: RegisterService
   ) {}
+
   @Input() roll: string;
   display = false;
   selected: boolean = false;
@@ -22,23 +24,16 @@ export class ContentComponent implements OnInit {
   titleColor: string;
 
   newCardItem: { roll: string; titleColor: string; name: string };
-  cards = [
-    { 
-      roll: 'مدیر',
-      titleColor: '#1d7137',
-      name: ' ',
-    },
-    { 
-     roll: 'برنامه نویس',
-     titleColor: '#5271b4',
-     name: '' },
-  ];
+
+  cards: any[] = [];
+
   openSnackBar(message: string) {
     this.snackbar.open(message, 'undo', {
       duration: 3000,
       horizontalPosition: 'right',
     });
   }
+
   numberOfCards = this.cards.length;
   cardAdd(e: any) {
     this.opened = false;
@@ -66,11 +61,9 @@ export class ContentComponent implements OnInit {
               roll: 'حسابدار',
               titleColor:'red',
             });
-           
           });
       }
     });
-
 
     this.mediaSub = this.mediaObserver
       .asObservable()
@@ -79,6 +72,7 @@ export class ContentComponent implements OnInit {
         this.deviceLg = change[0].mqAlias === 'lg' ? true : false;
       });
   }
+
   ngOnDestroy(): void {
     this.mediaSub.unsubscribe();
   }
