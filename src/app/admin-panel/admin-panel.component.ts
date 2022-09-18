@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Subscription } from 'rxjs';
+import { fromEvent, Subscription, take } from 'rxjs';
 import { Observable } from 'rxjs';
 import { RegisterService } from '../services/register.service';
 import { IUser } from '../Ishapes/shapes';
@@ -85,12 +85,10 @@ export class AdminPanelComponent implements OnInit {
   mediaSub: Subscription;
   deviceXs: boolean;
   deviceLg: boolean;
-  
   ngOnInit(): void {
     this.registeredList$ = this.service.getRegisteredList();
     this.userList$ = this.service.getUsersList();
     this.rollList$ = this.service.getRollList();
-
     this.mediaSub = this.mediaObserver
       .asObservable()  
       .subscribe((change: MediaChange[]) => {
