@@ -108,6 +108,7 @@ mat-drawer{
 }
 
 .card-content{
+    border-top: #1E90FF 4px solid;
     direction: rtl;
     width: 100%;
     box-sizing: border-box;
@@ -117,6 +118,7 @@ mat-drawer{
     flex-wrap: wrap;
     display: flex;
     align-content: stretch;
+    margin: 8px;
 }
 
 .card-content-mini{
@@ -144,6 +146,7 @@ mat-drawer{
 }
 
 .select-all-row{
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
 }

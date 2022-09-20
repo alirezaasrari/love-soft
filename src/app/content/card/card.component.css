@@ -1,5 +1,5 @@
 .app-card{
-    width: 300px;
+    width: 314px;
     min-height: 260px;
     border: #DFE4EA solid 1px;
    /* margin: 10px; */
@@ -40,7 +40,7 @@
     background-color: #FAF4E1;
     width: 80px;
     height: 24px;
-    color: #ffffff;
+    color: #2F3542;
     display: flex;
     justify-content: center;
     align-items: center;

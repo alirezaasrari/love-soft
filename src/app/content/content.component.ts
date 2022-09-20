@@ -23,7 +23,7 @@ export class ContentComponent implements OnInit {
   opened = false;
   titleColor: string;
 
-  newCardItem: { roll: string; titleColor: string; name: string };
+  newCardItem: { roll: string; titleColor: string; name: string, avatarColor: string };
 
   cards: any[] = [];
 
@@ -37,7 +37,8 @@ export class ContentComponent implements OnInit {
   numberOfCards = this.cards.length;
   cardAdd(e: any) {
     this.opened = false;
-    this.newCardItem = { roll: e.name, titleColor: e.theme, name: e.pname };
+    this.newCardItem = { roll: e.name, titleColor: e.theme, name: e.pname,
+       avatarColor: e.avatarColor };
     this.cards.push(this.newCardItem);
     this.openSnackBar('نقش اضافه گردید');
   }
@@ -59,7 +60,8 @@ export class ContentComponent implements OnInit {
             this.cards.push({
               name: res.name,
               roll: 'حسابدار',
-              titleColor:'red',
+              titleColor:'#F1F2F6',
+              avatarColor: '#27B360',
             });
           });
       }
