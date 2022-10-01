@@ -1,6 +1,6 @@
-<div *ngIf="!deviceXs" class="app-card">
+<div *ngIf="!deviceXs" [class] = "selected? 'app-card-selected' :  'app-card' ">
   <div class="card-header">
-    <mat-checkbox class="example-margin" [checked]="selected"></mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)] = "selected" color="primary"></mat-checkbox>
     <app-menu></app-menu>
   </div>
   <div class="card-avatar-roll-population">

@@ -47,10 +47,10 @@ export class ContentComponent implements OnInit {
   deviceXs: boolean;
   deviceLg: boolean;
   _length: number;
-  registeredId: number[];
+  registeredId: number[]; 
   ngOnInit(): void {
 
-    this.service.getUsersList().subscribe((x) => {
+    this.service.getUsersList().subscribe((x) => {     
       this._length = x.length;
       this.registeredId = x.map((s) => s.registerId);
       for (let i = 0; i < this._length; i++) {
