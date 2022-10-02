@@ -60,7 +60,7 @@ export class ContentComponent implements OnInit {
             this.cards.push({
               name: res.name,
               roll: 'حسابدار',
-              titleColor:'#F1F2F6',
+              titleColor:'#DFF7E9',
               avatarColor: '#27B360',
             });
           });

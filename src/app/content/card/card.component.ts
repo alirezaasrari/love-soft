@@ -16,7 +16,6 @@ export class CardComponent implements OnInit {
   @Input() avatarColor: string;
   color: ThemePalette = 'primary';
   checked = this.selected;
-  cardBackground = '@color/aliceblue';
   disabled = false;
   checked2 = false;
   checkedClass = 'app-card-selected';
