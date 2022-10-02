@@ -46,6 +46,8 @@
 .card-title-number{
     font-size: 14;
     color: #2F3542;
+    font-weight: bold;
+    color: #747D8C;
 }
 
 .card-button{
