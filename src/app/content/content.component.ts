@@ -53,6 +53,7 @@ export class ContentComponent implements OnInit {
   deviceLg: boolean;
   _length: number;
   registeredId: number[]; 
+  count : number = 1;
   ngOnInit(): void {
 
     this.service.getUsersList().subscribe((x) => {     
@@ -68,7 +69,8 @@ export class ContentComponent implements OnInit {
               titleColor:'#DFF7E9',
               avatarColor: '#27B360',
               _email : res.email,
-              password: res.password
+              password: res.password,
+              count : this.count++
             });
           });
       }

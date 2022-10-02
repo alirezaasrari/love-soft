@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
   @Input() _email: string;
   @Input() name: string;
   @Input() password: number;
+  @Input() count: number;
   color: ThemePalette = 'primary';
   checked = this.selected;
   disabled = false;

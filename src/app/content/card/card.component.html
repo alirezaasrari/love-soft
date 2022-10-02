@@ -31,6 +31,7 @@
   </div>
   <div style="display: flex;">
     <button
+      *ngIf="rollname == 'alireza'"
       mat-flat-button
       class="card-button"
       [style.background-color]="nameColor"
@@ -38,6 +39,14 @@
     >
       حسابدار
     </button>
+    <button
+    *ngIf="rollname == 'iman'"
+    mat-flat-button
+    class="card-button3"
+    style="font-weight: bold;"
+  >
+    مسوول انبار
+  </button>
     <button
     mat-flat-button
     class="card-button2"

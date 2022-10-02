@@ -76,6 +76,19 @@
     margin-left: 10px;
 }
 
+.card-button3{
+    margin-top: 30px;
+    box-sizing: border-box;
+    background-color: #FAF4E1;
+    width: 80px;
+    height: 24px;
+    color: #BAA152;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
 .card-status{
     flex-direction: row-reverse;
     display: flex;
