@@ -162,13 +162,15 @@
     </div>
     <div class="card-content" *ngIf="!deviceXs">
       <app-card
-        *ngFor="let card of cards"
-        [selected]="selected"
-        [rollname]="card.roll"
-        [nameColor]="card.titleColor"
-        [personName]="card.name"
-        [avatarColor]="card.avatarColor"
-        [countnumber]= "count"
+      *ngFor="let card of cards"
+      [selected]="selected"
+      [selected]="selected"
+      [rollname]="card.roll"
+      [name]="card.name"
+      [nameColor]="card.titleColor"
+      [personName]="card.name"
+      [_email]="card._email"
+      [password]="card.password"
       ></app-card>
     </div>
     <div class="card-content-mini" *ngIf="deviceXs">
@@ -177,8 +179,11 @@
         [selected]="selected"
         [selected]="selected"
         [rollname]="card.roll"
+        [name]="card.name"
         [nameColor]="card.titleColor"
         [personName]="card.name"
+        [_email]="card._email"
+        [password]="card.password"
       >
       </app-card>
       <mat-toolbar class="footer">

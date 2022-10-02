@@ -17,14 +17,18 @@ export class ContentComponent implements OnInit {
     private service: RegisterService
   ) {}
 
-  @Input() roll: string;
+  // @Input() roll: string;
   display = false;
   selected: boolean = false;
   opened = false;
   titleColor: string;
   countnumber: number;
+  _email : string;
+  password: number;
+  name: string;
 
-  newCardItem: { roll: string; titleColor: string; name: string, avatarColor: string, count:number };
+  newCardItem: { roll: string; titleColor: string; name: string,
+     avatarColor: string, _email: string };
 
   cards: any[] = [];
 
@@ -39,7 +43,7 @@ export class ContentComponent implements OnInit {
   cardAdd(e: any) {
     this.opened = false;
     this.newCardItem = { roll: e.name, titleColor: e.theme, name: e.pname,
-       avatarColor: e.avatarColor, count: e.count };
+       avatarColor: e.avatarColor, _email: e._email };
     this.cards.push(this.newCardItem);
     this.openSnackBar('نقش اضافه گردید');
   }
@@ -48,7 +52,6 @@ export class ContentComponent implements OnInit {
   deviceXs: boolean;
   deviceLg: boolean;
   _length: number;
-  count = 0;
   registeredId: number[]; 
   ngOnInit(): void {
 
@@ -60,16 +63,17 @@ export class ContentComponent implements OnInit {
           .getRegisteredById(this.registeredId[i])
           .subscribe((res: any) => {
             this.cards.push({
-              name: res.name,
-              roll: 'حسابدار',
+              name: res.password,
+              roll: res.name,
               titleColor:'#DFF7E9',
               avatarColor: '#27B360',
-              count : i++,
+              _email : res.email,
+              password: res.password
             });
           });
       }
     });
-
+    
     this.mediaSub = this.mediaObserver
       .asObservable()
       .subscribe((change: MediaChange[]) => {

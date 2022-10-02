@@ -5,7 +5,6 @@
       [(ngModel)]="selected"
       color="primary"
     ></mat-checkbox>
-    {{countnumber}}
     <app-menu></app-menu>
   </div>
   <div class="card-avatar-roll-population">
@@ -26,7 +25,8 @@
     </div>
     <div>
       <div class="card-title">{{ rollname }}</div>
-      <div class="card-title-number">5 عضو</div>
+      <div class="card-title-number">{{password}}</div>
+      <div>{{_email}}</div>
     </div>
   </div>
   <div style="display: flex;">
@@ -34,18 +34,19 @@
       mat-flat-button
       class="card-button"
       [style.background-color]="nameColor"
+      style="font-weight: bold;"
     >
       حسابدار
     </button>
     <button
     mat-flat-button
     class="card-button2"
-    style="background-color: #F4F0FF;"
+    style="background-color: #F4F0FF; font-weight: bold;"
   >
     مدیر
   </button>
   </div>
-  <mat-divider class="divider"></mat-divider>
+  <!-- <mat-divider class="divider"></mat-divider> -->
   <div class="card-status">
     <p>
       <svg
