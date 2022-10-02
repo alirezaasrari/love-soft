@@ -22,8 +22,9 @@ export class ContentComponent implements OnInit {
   selected: boolean = false;
   opened = false;
   titleColor: string;
+  countnumber: number;
 
-  newCardItem: { roll: string; titleColor: string; name: string, avatarColor: string };
+  newCardItem: { roll: string; titleColor: string; name: string, avatarColor: string, count:number };
 
   cards: any[] = [];
 
@@ -38,7 +39,7 @@ export class ContentComponent implements OnInit {
   cardAdd(e: any) {
     this.opened = false;
     this.newCardItem = { roll: e.name, titleColor: e.theme, name: e.pname,
-       avatarColor: e.avatarColor };
+       avatarColor: e.avatarColor, count: e.count };
     this.cards.push(this.newCardItem);
     this.openSnackBar('نقش اضافه گردید');
   }
@@ -47,6 +48,7 @@ export class ContentComponent implements OnInit {
   deviceXs: boolean;
   deviceLg: boolean;
   _length: number;
+  count = 0;
   registeredId: number[]; 
   ngOnInit(): void {
 
@@ -62,6 +64,7 @@ export class ContentComponent implements OnInit {
               roll: 'حسابدار',
               titleColor:'#DFF7E9',
               avatarColor: '#27B360',
+              count : i++,
             });
           });
       }

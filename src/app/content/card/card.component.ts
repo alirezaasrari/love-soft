@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   @Input() nameColor: string;
   @Input() personName: string;
   @Input() avatarColor: string;
+  @Input() countnumber: number;
   color: ThemePalette = 'primary';
   checked = this.selected;
   disabled = false;
