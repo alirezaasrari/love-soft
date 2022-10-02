@@ -13,13 +13,17 @@ export class CardComponent implements OnInit {
   @Input() rollname: string;
   @Input() nameColor: string;
   @Input() personName: string;
-  @Input() avatarColor: string;
   @Input() _email: string;
   @Input() name: string;
   @Input() password: number;
   @Input() count: number;
   color: ThemePalette = 'primary';
   checked = this.selected;
+  avatarColor = [
+    '#66519B',
+    '#27B360',
+    '#5F68FA'
+  ];
   disabled = false;
   checked2 = false;
   checkedClass = 'app-card-selected';

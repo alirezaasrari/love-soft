@@ -8,7 +8,11 @@
     <app-menu></app-menu>
   </div>
   <div class="card-avatar-roll-population">
-    <div class="card-avatar" [style.background-color]="avatarColor">
+    <div
+      *ngIf="rollname == 'masoud'"
+      class="card-avatar"
+      [style.background-color]="avatarColor[0]"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -23,37 +27,94 @@
         />
       </svg>
     </div>
+    <div
+      *ngIf="rollname == 'iman'"
+      class="card-avatar"
+      [style.background-color]="avatarColor[1]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24.75"
+        height="27.5"
+        viewBox="0 0 24.75 27.5"
+      >
+        <path
+          id="icons8_accounting_3"
+          d="M15.083,2a2.617,2.617,0,0,0-2.378,1.833H5V27.667H17.833V29.5H29.75V13.917H25.167V3.833H17.461A2.617,2.617,0,0,0,15.083,2Zm0,1.833A.9.9,0,0,1,16,4.75v.917h2.75V7.5H11.417V5.667h2.75V4.75A.9.9,0,0,1,15.083,3.833ZM6.833,5.667h2.75V9.333h11V5.667h2.75v8.25h-5.5V25.833h-11Zm1.833,5.5v3.667H10.5V11.167Zm5.5.917v2.75H16v-2.75ZM11.417,13v1.833H13.25V13Zm8.25,2.75h8.25V27.667h-8.25Zm-7.333.917A3.667,3.667,0,1,0,16,20.333,3.678,3.678,0,0,0,12.333,16.667Zm9.167.917v1.833h4.583V17.583Zm-9.167.917v1.833h1.833A1.833,1.833,0,1,1,12.333,18.5ZM21.5,21.25v1.833h1.833V21.25Zm2.75,0v1.833h1.833V21.25ZM21.5,24v1.833h1.833V24Zm2.75,0v1.833h1.833V24Z"
+          transform="translate(-5 -2)"
+          fill="#fff"
+        />
+      </svg>
+    </div>
+    <div
+      class="card-avatar"
+      [style.background-color]="avatarColor[1]"
+      *ngIf="rollname == 'ali'"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22.957"
+        height="24"
+        viewBox="0 0 22.957 24"
+      >
+        <path
+          id="icons8_manager"
+          d="M16.478,4a7.293,7.293,0,0,0-4.141,13.3A11.517,11.517,0,0,0,5,28H7.087a9.413,9.413,0,0,1,7.7-9.228l.652,1.924h2.087l.652-1.924A9.413,9.413,0,0,1,25.87,28h2.087A11.517,11.517,0,0,0,20.62,17.3,7.293,7.293,0,0,0,16.478,4Zm0,2.087A5.217,5.217,0,1,1,11.261,11.3,5.2,5.2,0,0,1,16.478,6.087ZM15.435,21.739,14.391,28h4.174l-1.043-6.261Z"
+          transform="translate(-5 -4)"
+          fill="#fff"
+        />
+      </svg>
+    </div>
+    <div
+      class="card-avatar"
+      [style.background-color]="avatarColor[2]"
+      *ngIf="rollname == 'alireza'"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22.957"
+        height="24"
+        viewBox="0 0 22.957 24"
+      >
+        <path
+          id="icons8_manager"
+          d="M16.478,4a7.293,7.293,0,0,0-4.141,13.3A11.517,11.517,0,0,0,5,28H7.087a9.413,9.413,0,0,1,7.7-9.228l.652,1.924h2.087l.652-1.924A9.413,9.413,0,0,1,25.87,28h2.087A11.517,11.517,0,0,0,20.62,17.3,7.293,7.293,0,0,0,16.478,4Zm0,2.087A5.217,5.217,0,1,1,11.261,11.3,5.2,5.2,0,0,1,16.478,6.087ZM15.435,21.739,14.391,28h4.174l-1.043-6.261Z"
+          transform="translate(-5 -4)"
+          fill="#fff"
+        />
+      </svg>
+    </div>
     <div>
       <div class="card-title">{{ rollname }}</div>
-      <div class="card-title-number">{{password}}</div>
-      <div class="card-title-number">{{_email}}</div>
+      <div class="card-title-number">{{ password }}</div>
+      <div class="card-title-number">{{ _email }}</div>
     </div>
   </div>
-  <div style="display: flex;">
+  <div style="display: flex">
     <button
       *ngIf="rollname == 'alireza'"
       mat-flat-button
       class="card-button"
       [style.background-color]="nameColor"
-      style="font-weight: bold;"
+      style="font-weight: bold"
     >
       حسابدار
     </button>
     <button
-    *ngIf="rollname == 'iman'"
-    mat-flat-button
-    class="card-button3"
-    style="font-weight: bold;"
-  >
-    مسوول انبار
-  </button>
+      *ngIf="rollname == 'iman'"
+      mat-flat-button
+      class="card-button3"
+      style="font-weight: bold"
+    >
+      مسوول انبار
+    </button>
     <button
-    mat-flat-button
-    class="card-button2"
-    style="background-color: #F4F0FF; font-weight: bold;"
-  >
-    مدیر
-  </button>
+      mat-flat-button
+      class="card-button2"
+      style="background-color: #f4f0ff; font-weight: bold"
+    >
+      مدیر
+    </button>
   </div>
   <!-- <mat-divider class="divider"></mat-divider> -->
   <div class="card-status">
