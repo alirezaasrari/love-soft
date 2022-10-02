@@ -12,8 +12,8 @@
 }
 
 .app-card-selected {
-    width: 314px;
-    min-height: 260px;
+    width: 470px;
+    min-height: 350px;
    /* margin: 10px; */
     display: flex;
     flex-direction: column;
