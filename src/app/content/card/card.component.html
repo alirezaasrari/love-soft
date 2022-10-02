@@ -118,7 +118,7 @@
   </div>
   <!-- <mat-divider class="divider"></mat-divider> -->
   <div class="card-status">
-    <p>
+    <p *ngIf="count == 2 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="8"
@@ -135,6 +135,79 @@
         />
       </svg>
       آنلاین
+    </p>
+
+    <p *ngIf="count == 3 ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="8"
+        viewBox="0 0 8 8"
+      >
+        <circle
+          id="Ellipse_120"
+          data-name="Ellipse 120"
+          cx="4"
+          cy="4"
+          r="4"
+          fill="#2ed573"
+        />
+      </svg>
+      آنلاین
+    </p>
+
+    <p *ngIf="count == 4 ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="8"
+        viewBox="0 0 8 8"
+      >
+        <circle
+          id="Ellipse_120"
+          data-name="Ellipse 120"
+          cx="4"
+          cy="4"
+          r="4"
+          fill="#2ed573"
+        />
+      </svg>
+      آنلاین
+    </p>
+
+    <p *ngIf="count == 6 ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="8"
+        viewBox="0 0 8 8"
+      >
+        <circle
+          id="Ellipse_120"
+          data-name="Ellipse 120"
+          cx="4"
+          cy="4"
+          r="4"
+          fill="#2ed573"
+        />
+      </svg>
+      آنلاین
+    </p>
+
+    <p *ngIf="count == 1 ">
+      امروز - 10:23
+    </p>
+
+    <p *ngIf="count == 5 ">
+      امروز - 10:23
+    </p>
+
+    <p *ngIf="count == 7 ">
+      امروز - 10:23
+    </p>
+
+    <p *ngIf="count == 8 ">
+      امروز - 10:23
     </p>
     <p>
       <!--<mat-slide-toggle
@@ -165,7 +238,16 @@
   </div>
   <mat-divider class="divider"></mat-divider>
   <div class="card-status">
-    <p>انلاین</p>
+    <p *ngIf="rollname == 'iman' && 'alireza'">انلاین</p>
+    <p *ngIf="rollname == 'ali' && 'masoud'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="114" height="16" viewBox="0 0 114 16">
+        <g id="Group_2692" data-name="Group 2692" transform="translate(1 1)">
+          <text id="_1399_04_28" data-name="1399/04/28" transform="translate(82 12)" fill="#2f3542" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="-30.551" y="0">1399/04/28</tspan></text>
+          <text id="_-" data-name="-" transform="translate(40 12)" fill="#2f3542" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="-2.399" y="0">-</tspan></text>
+          <text id="_16:31" data-name="16:31" transform="translate(15 12)" fill="#2f3542" font-size="12" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.431" y="0">16:31</tspan></text>
+        </g>
+      </svg>
+    </p>
     <p>
       <mat-slide-toggle
         class="example-margin"

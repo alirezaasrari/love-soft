@@ -24,10 +24,20 @@ export class CardComponent implements OnInit {
     '#27B360',
     '#5F68FA'
   ];
+  // borderRemover(){
+  //   if(this.selected){
+  //     console.log('checked')
+  //   }else{
+  //     console.log('unchecked')
+  //   }
+  // }
   disabled = false;
   checked2 = false;
   checkedClass = 'app-card-selected';
   constructor() { }
   ngOnInit(): void {
+    //this.borderRemover()
   }
+  // ngOnChange():void{
+  // }
 }
